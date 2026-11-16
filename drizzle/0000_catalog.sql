@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS emotes (
+  id TEXT PRIMARY KEY NOT NULL,
+  item_json TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);

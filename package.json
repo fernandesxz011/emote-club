@@ -1,0 +1,9 @@
+{
+  "name": "emote-club",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/backend.mjs"
+  }
+}

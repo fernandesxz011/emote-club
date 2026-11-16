@@ -1,0 +1,803 @@
+[
+  {
+    "id": "4849499887",
+    "name": "Happy",
+    "category": "Feliz",
+    "description": "Energia positiva para uma boa notícia, encontro ou começo de gravação.",
+    "tags": [
+      "alegria",
+      "felicidade",
+      "animação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849499887/Happy",
+    "thumbnail": "/assets/emote-4849499887.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3576686446",
+    "name": "Hello",
+    "category": "Cumprimentos",
+    "description": "Aceno de saudação para abrir uma cena ou receber um colega.",
+    "tags": [
+      "olá",
+      "oi",
+      "saudação",
+      "aceno"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576686446/Hello",
+    "thumbnail": "/assets/emote-3576686446.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4849487550",
+    "name": "Agree",
+    "category": "Confirmação",
+    "description": "Gesto de concordância para responder sim e confirmar uma ideia.",
+    "tags": [
+      "sim",
+      "concordar",
+      "aceitar",
+      "confirmar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849487550/Agree",
+    "thumbnail": "/assets/emote-4849487550.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5104374556",
+    "name": "Tantrum",
+    "category": "Raiva",
+    "description": "Reação de birra para frustração, indignação e explosões de impaciência.",
+    "tags": [
+      "birra",
+      "irritação",
+      "frustração",
+      "furioso"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5104374556/Tantrum",
+    "thumbnail": "/assets/emote-5104374556.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4849502101",
+    "name": "Sad",
+    "category": "Triste",
+    "description": "Expressão de tristeza para decepção, despedida ou uma notícia ruim.",
+    "tags": [
+      "tristeza",
+      "decepção",
+      "desânimo",
+      "sozinho"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849502101/Sad",
+    "thumbnail": "/assets/emote-4849502101.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4849495710",
+    "name": "Disagree",
+    "category": "Negação",
+    "description": "Gesto de discordância para recusar uma proposta ou responder não.",
+    "tags": [
+      "não",
+      "discordar",
+      "recusar",
+      "negativo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849495710/Disagree",
+    "thumbnail": "/assets/emote-4849495710.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5895009708",
+    "name": "Jumping Cheer",
+    "category": "Muito feliz",
+    "description": "Comemoração com saltos para uma reação de alegria intensa.",
+    "tags": [
+      "pular",
+      "festa",
+      "comemorar",
+      "euforia"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5895009708/Jumping-Cheer",
+    "thumbnail": "/assets/emote-5895009708.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4940592718",
+    "name": "Confused",
+    "category": "Surpresa",
+    "description": "Reação de confusão para algo inesperado ou difícil de entender.",
+    "tags": [
+      "confusão",
+      "dúvida",
+      "o quê",
+      "surpreso"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940592718/Confused",
+    "thumbnail": "/assets/emote-4940592718.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4102315500",
+    "name": "Haha",
+    "category": "Feliz",
+    "description": "Reação de risada para piadas, zoeira e momentos engraçados.",
+    "tags": [
+      "riso",
+      "rir",
+      "piada",
+      "engraçado"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4102315500/Haha",
+    "thumbnail": "/assets/emote-4102315500.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3994127840",
+    "name": "Celebrate",
+    "category": "Feliz",
+    "description": "Uma comemoração para celebrar uma pequena vitória em cena.",
+    "tags": [
+      "comemoração",
+      "vitória",
+      "celebrar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3994127840/Celebrate",
+    "thumbnail": "/assets/emote-3994127840.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5915779043",
+    "name": "Applaud",
+    "category": "Confirmação",
+    "description": "Aplausos para demonstrar apoio, aprovação e reconhecimento.",
+    "tags": [
+      "palmas",
+      "apoiar",
+      "aprovar",
+      "parabéns"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5915779043/Applaud",
+    "thumbnail": "/assets/emote-5915779043.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4940602656",
+    "name": "Jumping Wave",
+    "category": "Muito feliz",
+    "description": "Aceno com saltos para encontrar alguém com muita empolgação.",
+    "tags": [
+      "pulos",
+      "acenar",
+      "encontro",
+      "empolgação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940602656/Jumping-Wave",
+    "thumbnail": "/assets/emote-4940602656.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3360686498",
+    "name": "Stadium",
+    "category": "Muito feliz",
+    "description": "Gesto de torcida para dar energia a uma conquista coletiva.",
+    "tags": [
+      "torcida",
+      "festa",
+      "celebração",
+      "equipe"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3360686498/Stadium",
+    "thumbnail": "/assets/emote-3360686498.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3762654854",
+    "name": "Greatest",
+    "category": "Muito feliz",
+    "description": "Uma reação confiante para celebrar que você mandou bem.",
+    "tags": [
+      "vitória",
+      "orgulho",
+      "campeão",
+      "conquista"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3762654854/Greatest",
+    "thumbnail": "/assets/emote-3762654854.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5230661597",
+    "name": "Bored",
+    "category": "Triste",
+    "description": "Reação de tédio e desânimo para esperas e cenas sem energia.",
+    "tags": [
+      "tédio",
+      "cansado",
+      "espera",
+      "desânimo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5230661597/Bored",
+    "thumbnail": "/assets/emote-5230661597.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3576717965",
+    "name": "Shy",
+    "category": "Triste",
+    "description": "Reação tímida para cenas de constrangimento ou vulnerabilidade.",
+    "tags": [
+      "timidez",
+      "vergonha",
+      "constrangido",
+      "sensível"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576717965/Shy",
+    "thumbnail": "/assets/emote-3576717965.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "124300863605270",
+    "name": "Sitting Sad Crying",
+    "category": "Muito triste",
+    "description": "Pose sentada de choro para uma cena de tristeza e isolamento.",
+    "tags": [
+      "choro",
+      "chorar",
+      "sentado",
+      "solidão",
+      "tristeza"
+    ],
+    "creator": "SukiDrop 落",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/124300863605270/Sitting-Sad-Crying",
+    "thumbnail": "/assets/emote-124300863605270.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "122660651264618",
+    "name": "Crying Curled Ball",
+    "category": "Muito triste",
+    "description": "O avatar se encolhe em uma bola e chora, em uma reação de tristeza intensa.",
+    "tags": [
+      "choro",
+      "encolhido",
+      "decepção",
+      "drama",
+      "tristeza"
+    ],
+    "creator": "Kursed Animations",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/122660651264618/Crying-Curled-Ball",
+    "thumbnail": "/assets/emote-122660651264618.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "81959243147756",
+    "name": "Crying on floor",
+    "category": "Muito triste",
+    "description": "Choro no chão para uma derrota dramática ou uma cena emocional.",
+    "tags": [
+      "choro",
+      "chão",
+      "drama",
+      "derrota",
+      "chorar"
+    ],
+    "creator": "Emote Ugcs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/81959243147756/Crying-on-floor",
+    "thumbnail": "/assets/emote-81959243147756.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3360689775",
+    "name": "Salute",
+    "category": "Confirmação",
+    "description": "Continência para mostrar respeito ou confirmar que entendeu uma ordem.",
+    "tags": [
+      "entendido",
+      "respeito",
+      "ok",
+      "continência"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3360689775/Salute",
+    "thumbnail": "/assets/emote-3360689775.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "137980489530934",
+    "name": "Nodding Yes ✅",
+    "category": "Confirmação",
+    "description": "Aceno afirmativo com a cabeça para responder sim em diálogos.",
+    "tags": [
+      "sim",
+      "cabeça",
+      "concordar",
+      "positivo"
+    ],
+    "creator": "Dream UGCs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/137980489530934/Nodding-Yes-%E2%9C%85",
+    "thumbnail": "/assets/emote-137980489530934.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3934984583",
+    "name": "Get Out",
+    "category": "Negação",
+    "description": "Reação de rejeição para mandar embora ou reprovar uma ideia absurda.",
+    "tags": [
+      "fora",
+      "rejeitar",
+      "recusar",
+      "reprovar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3934984583/Get-Out",
+    "thumbnail": "/assets/emote-3934984583.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "94459884375170",
+    "name": "No!",
+    "category": "Negação",
+    "description": "Uma negativa enfática para deixar clara uma recusa na cena.",
+    "tags": [
+      "não",
+      "negar",
+      "recusar",
+      "rejeição"
+    ],
+    "creator": "K4RM4 EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/94459884375170/No%21",
+    "thumbnail": "/assets/emote-94459884375170.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "7202896732",
+    "name": "Boxing Punch - KSI",
+    "category": "Raiva",
+    "description": "Sequência de socos de boxe para encenar um confronto ou desafio.",
+    "tags": [
+      "boxe",
+      "socos",
+      "confronto",
+      "desafio"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/7202896732/Boxing-Punch---KSI",
+    "thumbnail": "/assets/emote-7202896732.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4849497510",
+    "name": "Power Blast",
+    "category": "Raiva",
+    "description": "Pose de explosão de poder para um momento de fúria ou transformação.",
+    "tags": [
+      "poder",
+      "explosão",
+      "fúria",
+      "transformação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849497510/Power-Blast",
+    "thumbnail": "/assets/emote-4849497510.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3934986896",
+    "name": "Dizzy",
+    "category": "Surpresa",
+    "description": "Reação de tontura para um susto, confusão ou gag de desequilíbrio.",
+    "tags": [
+      "tonto",
+      "confuso",
+      "desequilíbrio",
+      "susto"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3934986896/Dizzy",
+    "thumbnail": "/assets/emote-3934986896.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3576968026",
+    "name": "Shrug",
+    "category": "Surpresa",
+    "description": "Encolher de ombros para dizer que não sabe ou não entendeu.",
+    "tags": [
+      "não sei",
+      "ombros",
+      "dúvida",
+      "incerteza"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576968026/Shrug",
+    "thumbnail": "/assets/emote-3576968026.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5915776835",
+    "name": "High Wave",
+    "category": "Cumprimentos",
+    "description": "Aceno alto para cumprimentar alguém ou chamar atenção à distância.",
+    "tags": [
+      "oi",
+      "acenar",
+      "longe",
+      "multidão"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5915776835/High-Wave",
+    "thumbnail": "/assets/emote-5915776835.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4646306583",
+    "name": "Curtsy",
+    "category": "Cumprimentos",
+    "description": "Reverência delicada para uma apresentação ou cumprimento formal.",
+    "tags": [
+      "reverência",
+      "educação",
+      "formal",
+      "apresentação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4646306583/Curtsy",
+    "thumbnail": "/assets/emote-4646306583.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5230615437",
+    "name": "Beckon",
+    "category": "Cumprimentos",
+    "description": "Gesto para chamar alguém e convidar a pessoa a se aproximar.",
+    "tags": [
+      "vem",
+      "chamar",
+      "aproximar",
+      "convite"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5230615437/Beckon",
+    "thumbnail": "/assets/emote-5230615437.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "6869813008",
+    "name": "Samba",
+    "category": "Dança",
+    "description": "Dança com clima de festa para cenas leves e comemorações em grupo.",
+    "tags": [
+      "samba",
+      "festa",
+      "dançar",
+      "alegria"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/6869813008/Samba",
+    "thumbnail": "/assets/emote-6869813008.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5917570207",
+    "name": "Floss Dance",
+    "category": "Dança",
+    "description": "O clássico floss para momentos divertidos e transições descontraídas.",
+    "tags": [
+      "floss",
+      "dançar",
+      "clássico",
+      "diversão"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5917570207/Floss-Dance",
+    "thumbnail": "/assets/emote-5917570207.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5938365243",
+    "name": "Dolphin Dance",
+    "category": "Dança",
+    "description": "Dança descontraída para inserir humor e movimento em uma gravação.",
+    "tags": [
+      "dançar",
+      "humor",
+      "festa",
+      "divertido"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5938365243/Dolphin-Dance",
+    "thumbnail": "/assets/emote-5938365243.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3576721660",
+    "name": "Robot",
+    "category": "Dança",
+    "description": "Movimentos de robô para humor mecânico e cenas de dança.",
+    "tags": [
+      "robô",
+      "mecânico",
+      "dançar",
+      "engraçado"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576721660/Robot",
+    "thumbnail": "/assets/emote-3576721660.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3762641826",
+    "name": "Side to Side",
+    "category": "Dança",
+    "description": "Dança lateral para acompanhar uma música ou animar uma cena.",
+    "tags": [
+      "lateral",
+      "dançar",
+      "música",
+      "ritmo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3762641826/Side-to-Side",
+    "thumbnail": "/assets/emote-3762641826.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3716633898",
+    "name": "Twirl",
+    "category": "Dança",
+    "description": "Giros para uma entrada alegre, apresentação ou transição de cena.",
+    "tags": [
+      "girar",
+      "rodopiar",
+      "dança",
+      "entrada"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3716633898/Twirl",
+    "thumbnail": "/assets/emote-3716633898.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4689362868",
+    "name": "Sleep",
+    "category": "Descanso",
+    "description": "Pose de sono para cenas de cansaço, espera ou descanso.",
+    "tags": [
+      "dormir",
+      "sono",
+      "cansaço",
+      "descansar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4689362868/Sleep",
+    "thumbnail": "/assets/emote-4689362868.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "4940597758",
+    "name": "Cower",
+    "category": "Medo",
+    "description": "Reação de se encolher para encenar medo ou insegurança.",
+    "tags": [
+      "medo",
+      "receio",
+      "encolher",
+      "insegurança"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940597758/Cower",
+    "thumbnail": "/assets/emote-4940597758.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "3823158750",
+    "name": "Godlike",
+    "category": "Confiança",
+    "description": "Pose imponente para entradas triunfais e momentos de poder.",
+    "tags": [
+      "poder",
+      "confiança",
+      "triunfo",
+      "épico"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3823158750/Godlike",
+    "thumbnail": "/assets/emote-3823158750.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  },
+  {
+    "id": "5104377791",
+    "name": "Hero Landing",
+    "category": "Confiança",
+    "description": "Aterrissagem de herói para uma entrada marcante na gravação.",
+    "tags": [
+      "herói",
+      "entrada",
+      "aterrissagem",
+      "ação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5104377791/Hero-Landing",
+    "thumbnail": "/assets/emote-5104377791.png",
+    "addedBy": null,
+    "createdAt": null,
+    "verifiedAt": "2026-11-16",
+    "testedInGame": false
+  }
+]
