@@ -14,7 +14,7 @@ async function assetDirectory(relative) {
     if (entry.isDirectory()) await assetDirectory(child); else await assetFile(child);
   }
 }
-for (const file of ['index.html', 'styles.css', 'app.js', 'seed.json']) await assetFile(file);
+for (const file of ['index.html', 'styles.css', 'app.js', 'library.js', 'seed.json']) await assetFile(file);
 try { await assetDirectory('assets'); } catch (error) { if (error.code !== 'ENOENT') throw error; }
 const seed = JSON.parse(await readFile(path.join(root, 'seed.json'), 'utf8'));
 if (!Array.isArray(seed) || !seed.length) throw new Error('seed.json precisa conter os emotes pesquisados.');

@@ -6,7 +6,17 @@ const responseHeaders = {
   'X-Content-Type-Options': 'nosniff',
 };
 const json = (data, status = 200) => new Response(JSON.stringify(data), {status, headers: responseHeaders});
-const fail = (message, status = 400) => json({error: message}, status);
+const fail = (message, status = 400, code) => json({error: message, ...(code ? {code} : {})}, status);
+
+async function readProfile(db, userId) {
+  const row = await db.prepare('SELECT display_name, created_at FROM profiles WHERE user_id = ?').bind(userId).first();
+  return row ? {displayName: row.display_name, createdAt: row.created_at} : null;
+}
+
+async function readSaved(db, userId) {
+  const result = await db.prepare('SELECT emote_id, saved_at FROM saved_emotes WHERE user_id = ? ORDER BY saved_at DESC').bind(userId).all();
+  return (result.results || []).map(row => ({id: row.emote_id, savedAt: row.saved_at}));
+}
 
 export function parseAssetId(value) {
   const input = String(value ?? '').trim();
@@ -62,6 +72,7 @@ export async function verifyRoblox(id, fetcher = fetch) {
 }
 
 export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
+  const catalogSeed = seed.map(item => ({...item, createdAt: item.createdAt || '2026-11-16T23:47:52.897Z'}));
   return {
     async fetch(request, env = {}) {
       const url = new URL(request.url);
@@ -69,16 +80,70 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
       const user = identity(request);
 
       if (path === '/api/health' && request.method === 'GET') return json({ok: true, database: Boolean(env.DB)});
-      if (path === '/api/me' && request.method === 'GET') return json({signedIn: Boolean(user), name: user?.name ?? null});
+      if (path === '/api/me' && request.method === 'GET') {
+        const base = {signedIn: Boolean(user), name: user?.name ?? null, profile: null, saved: [], storage: env.DB ? 'shared' : 'unavailable'};
+        if (!user) return json(base);
+        if (!env.DB) return json({...base, warning: 'Seu perfil e seus emotes salvos estão temporariamente indisponíveis. Tente novamente em instantes.'});
+        try {
+          const [profile, saved] = await Promise.all([readProfile(env.DB, user.id), readSaved(env.DB, user.id)]);
+          return json({...base, name: profile?.displayName || user.name, profile, saved});
+        } catch {
+          return json({...base, storage: 'unavailable', warning: 'Não foi possível carregar seu perfil e seus emotes salvos. Tente novamente em instantes.'});
+        }
+      }
+
+      if ((path === '/api/profile' || path === '/api/saved') && request.method === 'POST') {
+        const origin = request.headers.get('origin');
+        if (origin && origin !== url.origin) return fail('Esta solicitação veio de outro site. Abra o Emote Club e tente novamente.', 403);
+        if (!user) return fail('Entre com sua conta do ChatGPT para usar sua biblioteca pessoal.', 401);
+        if (!env.DB) return fail('Sua biblioteca pessoal está temporariamente indisponível. Tente novamente em instantes.', 503);
+        let body;
+        try { body = await bodyOf(request); } catch (error) { return fail(error.message); }
+
+        if (path === '/api/profile') {
+          const displayName = typeof body.displayName === 'string' ? body.displayName.trim().replace(/\s+/g, ' ') : '';
+          if (displayName.length < 2 || displayName.length > 50 || /[\u0000-\u001f\u007f]/.test(displayName)) return fail('Escolha um nome com 2 a 50 caracteres.');
+          const now = new Date().toISOString();
+          try {
+            await env.DB.prepare('INSERT INTO profiles (user_id, display_name, created_at, updated_at) VALUES (?, ?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET display_name = excluded.display_name, updated_at = excluded.updated_at').bind(user.id, displayName, now, now).run();
+            const [profile, saved] = await Promise.all([readProfile(env.DB, user.id), readSaved(env.DB, user.id)]);
+            return json({profile, saved, name: profile.displayName, storage: 'shared'});
+          } catch {
+            return fail('Não foi possível salvar seu perfil agora. Tente novamente em instantes.', 503);
+          }
+        }
+
+        const id = parseAssetId(body.id);
+        if (!id) return fail('Informe um ID de emote válido para salvar na sua biblioteca.');
+        if (typeof body.saved !== 'boolean') return fail('Informe se o emote deve ser salvo ou removido da sua biblioteca.');
+        try {
+          const profile = await readProfile(env.DB, user.id);
+          if (!profile) return fail('Crie seu perfil para salvar emotes na sua biblioteca pessoal.', 409, 'PROFILE_REQUIRED');
+          if (!catalogSeed.some(item => String(item.id) === id)) {
+            const existing = await env.DB.prepare('SELECT id FROM emotes WHERE id = ?').bind(id).first();
+            if (!existing) return fail('Este emote não foi encontrado na biblioteca da equipe.', 404);
+          }
+          if (!body.saved) {
+            await env.DB.prepare('DELETE FROM saved_emotes WHERE user_id = ? AND emote_id = ?').bind(user.id, id).run();
+            return json({id, saved: false, savedAt: null});
+          }
+          const now = new Date().toISOString();
+          await env.DB.prepare('INSERT INTO saved_emotes (user_id, emote_id, saved_at) VALUES (?, ?, ?) ON CONFLICT(user_id, emote_id) DO NOTHING').bind(user.id, id, now).run();
+          const stored = await env.DB.prepare('SELECT saved_at FROM saved_emotes WHERE user_id = ? AND emote_id = ?').bind(user.id, id).first();
+          return json({id, saved: true, savedAt: stored.saved_at});
+        } catch {
+          return fail('Não foi possível atualizar seus emotes salvos. Tente novamente em instantes.', 503);
+        }
+      }
 
       if (path === '/api/emotes' && request.method === 'GET') {
-        if (!env.DB) return json({items: seed, storage: 'unavailable', warning: 'O catálogo está disponível para consulta. O cadastro compartilhado está temporariamente indisponível.'});
+        if (!env.DB) return json({items: catalogSeed, storage: 'unavailable', warning: 'O catálogo está disponível para consulta. O cadastro compartilhado está temporariamente indisponível.'});
         try {
           const result = await env.DB.prepare('SELECT item_json FROM emotes ORDER BY created_at DESC LIMIT 2000').all();
           const additions = (result.results || []).map(row => JSON.parse(row.item_json));
-          return json({items: [...seed, ...additions.filter(item => !seed.some(existing => String(existing.id) === String(item.id)))], storage: 'shared'});
+          return json({items: [...catalogSeed, ...additions.filter(item => !seed.some(existing => String(existing.id) === String(item.id)))], storage: 'shared'});
         } catch {
-          return json({items: seed, storage: 'unavailable', warning: 'Não foi possível carregar os cadastros da equipe agora. Tente novamente em instantes.'});
+          return json({items: catalogSeed, storage: 'unavailable', warning: 'Não foi possível carregar os cadastros da equipe agora. Tente novamente em instantes.'});
         }
       }
 
@@ -106,10 +171,13 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
           const existing = await env.DB.prepare('SELECT id FROM emotes WHERE id = ?').bind(id).first();
           if (existing) return fail('Este emote já foi adicionado pela equipe. Busque pelo ID para encontrá-lo.', 409);
         } catch { return fail('Não foi possível acessar o catálogo compartilhado. Tente novamente em instantes.', 503); }
+        let profile;
+        try { profile = await readProfile(env.DB, user.id); }
+        catch { return fail('Não foi possível carregar seu perfil para identificar esta contribuição. Tente novamente em instantes.', 503); }
         const checked = await verifyRoblox(id, fetcher);
         if (checked.error) return fail(checked.error, checked.status);
         const createdAt = new Date().toISOString();
-        const item = {...checked.item, category: body.category, description, tags: [...new Set(body.tags.map(tag => tag.trim().toLowerCase()))], addedBy: user.name, createdAt, verifiedAt: createdAt.slice(0, 10), testedInGame: false};
+        const item = {...checked.item, category: body.category, description, tags: [...new Set(body.tags.map(tag => tag.trim().toLowerCase()))], addedBy: profile?.displayName || user.name, createdAt, verifiedAt: createdAt.slice(0, 10), testedInGame: false};
         try {
           await env.DB.prepare('INSERT INTO emotes (id, item_json, created_at) VALUES (?, ?, ?)').bind(id, JSON.stringify(item), item.createdAt).run();
           return json({item}, 201);
@@ -127,7 +195,7 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
       const bytes = Uint8Array.from(atob(asset.body), char => char.charCodeAt(0));
       return new Response(request.method === 'HEAD' ? null : bytes, {headers: {
         'Content-Type': asset.type,
-        'Cache-Control': key.endsWith('.html') ? 'no-cache' : 'public, max-age=3600',
+        'Cache-Control': /\.(png|webp|jpg|woff2)$/.test(key) ? 'public, max-age=3600' : 'no-cache',
         'X-Content-Type-Options': 'nosniff',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
       }});
