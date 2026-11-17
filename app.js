@@ -208,11 +208,11 @@ load();
 loadPersonal();
 
 function renderAccount() {
- const signedIn=!!state.user?.signedIn;
- $('#account-label').textContent=signedIn?'Minha conta':'Entrar';
- $('#sidebar-account-label').textContent=signedIn?'Minha conta':'Entrar ou criar conta';
- $('#user-avatar').textContent='EC';
- $('#open-profile').title=signedIn?'Minha conta no Emote Club':'Entrar ou criar minha conta';
+ const name=state.user?.profile?.displayName;
+ $('#account-label').textContent=name||'Entrar';
+ $('#sidebar-account-label').textContent=name?`Olá, ${name}`:'Entrar ou criar conta';
+ $('#user-avatar').textContent=name?name.split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase():'EC';
+ $('#open-profile').title=name?`Meu cadastro: ${name}`:'Entrar ou criar minha conta';
  if($('#profile-dialog').open) renderProfile();
 }
 function renderPersonalNotice() {
@@ -225,7 +225,7 @@ function renderPersonalNotice() {
  if(!state.personalReady) {title.textContent='Carregando sua coleção…';text.textContent='Estamos buscando os emotes salvos na sua conta.';action.hidden=true;}
  else if(state.personalStorage!=='shared') {title.textContent='Seus salvos não puderam ser carregados';text.textContent='Abra seu cadastro para tentar sincronizar novamente. Nenhum registro foi removido.';action.textContent='Tentar novamente';}
  else if(!state.user?.profile) {title.textContent='Uma coleção só sua';text.textContent='Crie seu usuário e senha para encontrar seus salvos em qualquer dispositivo.';action.textContent='Entrar ou criar conta';}
- else {title.textContent='Meus emotes salvos';text.textContent='Tudo que você já salvou fica aqui. Salvar no Club não compra ou equipa o emote no Roblox.';action.textContent='Meu cadastro';}
+ else {title.textContent=`A coleção de ${state.user.profile.displayName}`;text.textContent='Tudo que você já salvou fica aqui. Salvar no Club não compra ou equipa o emote no Roblox.';action.textContent='Meu cadastro';}
 }
 async function loadPersonal() {
  const epoch=authEpoch;state.personalReady=false;
@@ -246,7 +246,7 @@ function renderProfile() {
  $('#profile-title').innerHTML=registered?'Sua conta no Club<span>.</span>':authMode==='register'?'Crie seu lugar no Club<span>.</span>':'Entre para o Club<span>.</span>';
  if(!user?.signedIn) return;
  if(!profileNameDirty) $('#profile-name').value=user.profile?.displayName||'';
- $('#profile-identity-name').textContent='Conta do Emote Club';
+ $('#profile-identity-name').textContent=`${user.profile?.displayName||user.name} · @${user.username||''}`;
  $('#profile-stats').hidden=!registered;
  $('#profile-saved-count').textContent=state.favorites.size;
  $('#profile-created').textContent=registered?`No Club desde ${new Date(user.profile.createdAt).toLocaleDateString('pt-BR')}`:'';
