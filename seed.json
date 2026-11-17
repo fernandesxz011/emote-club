@@ -1,0 +1,6265 @@
+[
+  {
+    "id": "4849499887",
+    "name": "Happy",
+    "category": "Feliz",
+    "description": "Energia positiva para uma boa notícia, encontro ou começo de gravação.",
+    "tags": [
+      "alegria",
+      "felicidade",
+      "animação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849499887",
+    "thumbnail": "/assets/emote-4849499887.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714352626"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576686446",
+    "name": "Hello",
+    "category": "Cumprimentos",
+    "description": "Aceno de saudação para abrir uma cena ou receber um colega.",
+    "tags": [
+      "olá",
+      "oi",
+      "saudação",
+      "aceno"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576686446",
+    "thumbnail": "/assets/emote-3576686446.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 0,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714359093"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4849487550",
+    "name": "Agree",
+    "category": "Confirmação",
+    "description": "Gesto de concordância para responder sim e confirmar uma ideia.",
+    "tags": [
+      "sim",
+      "concordar",
+      "aceitar",
+      "confirmar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849487550",
+    "thumbnail": "/assets/emote-4849487550.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713954623"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5104374556",
+    "name": "Tantrum",
+    "category": "Raiva",
+    "description": "Reação de birra para frustração, indignação e explosões de impaciência.",
+    "tags": [
+      "birra",
+      "irritação",
+      "frustração",
+      "furioso"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5104374556",
+    "thumbnail": "/assets/emote-5104374556.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714340558"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4849502101",
+    "name": "Sad",
+    "category": "Triste",
+    "description": "Expressão de tristeza para decepção, despedida ou uma notícia ruim.",
+    "tags": [
+      "tristeza",
+      "decepção",
+      "desânimo",
+      "sozinho"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849502101",
+    "thumbnail": "/assets/emote-4849502101.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714392876"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4849495710",
+    "name": "Disagree",
+    "category": "Negação",
+    "description": "Gesto de discordância para recusar uma proposta ou responder não.",
+    "tags": [
+      "não",
+      "discordar",
+      "recusar",
+      "negativo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849495710",
+    "thumbnail": "/assets/emote-4849495710.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714065135"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5895009708",
+    "name": "Jumping Cheer",
+    "category": "Muito feliz",
+    "description": "Comemoração com saltos para uma reação de alegria intensa.",
+    "tags": [
+      "pular",
+      "festa",
+      "comemorar",
+      "euforia"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5895009708",
+    "thumbnail": "/assets/emote-5895009708.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "5895324424"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4940592718",
+    "name": "Confused",
+    "category": "Surpresa",
+    "description": "Reação de confusão para algo inesperado ou difícil de entender.",
+    "tags": [
+      "confusão",
+      "dúvida",
+      "o quê",
+      "surpreso"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940592718",
+    "thumbnail": "/assets/emote-4940592718.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "4940561610"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4102315500",
+    "name": "Haha",
+    "category": "Feliz",
+    "description": "Reação de risada para piadas, zoeira e momentos engraçados.",
+    "tags": [
+      "riso",
+      "rir",
+      "piada",
+      "engraçado"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4102315500",
+    "thumbnail": "/assets/emote-4102315500.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714350889"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3994127840",
+    "name": "Celebrate",
+    "category": "Feliz",
+    "description": "Uma comemoração para celebrar uma pequena vitória em cena.",
+    "tags": [
+      "comemoração",
+      "vitória",
+      "celebrar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3994127840",
+    "thumbnail": "/assets/emote-3994127840.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714016223"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5915779043",
+    "name": "Applaud",
+    "category": "Confirmação",
+    "description": "Aplausos para demonstrar apoio, aprovação e reconhecimento.",
+    "tags": [
+      "palmas",
+      "apoiar",
+      "aprovar",
+      "parabéns"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5915779043",
+    "thumbnail": "/assets/emote-5915779043.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 0,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713966026"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4940602656",
+    "name": "Jumping Wave",
+    "category": "Muito feliz",
+    "description": "Aceno com saltos para encontrar alguém com muita empolgação.",
+    "tags": [
+      "pulos",
+      "acenar",
+      "encontro",
+      "empolgação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940602656",
+    "thumbnail": "/assets/emote-4940602656.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714378156"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3360686498",
+    "name": "Stadium",
+    "category": "Muito feliz",
+    "description": "Gesto de torcida para dar energia a uma conquista coletiva.",
+    "tags": [
+      "torcida",
+      "festa",
+      "celebração",
+      "equipe"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3360686498",
+    "thumbnail": "/assets/emote-3360686498.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 0,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714356920"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3762654854",
+    "name": "Greatest",
+    "category": "Muito feliz",
+    "description": "Uma reação confiante para celebrar que você mandou bem.",
+    "tags": [
+      "vitória",
+      "orgulho",
+      "campeão",
+      "conquista"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3762654854",
+    "thumbnail": "/assets/emote-3762654854.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714349037"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5230661597",
+    "name": "Bored",
+    "category": "Triste",
+    "description": "Reação de tédio e desânimo para esperas e cenas sem energia.",
+    "tags": [
+      "tédio",
+      "cansado",
+      "espera",
+      "desânimo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5230661597",
+    "thumbnail": "/assets/emote-5230661597.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713992055"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576717965",
+    "name": "Shy",
+    "category": "Triste",
+    "description": "Reação tímida para cenas de constrangimento ou vulnerabilidade.",
+    "tags": [
+      "timidez",
+      "vergonha",
+      "constrangido",
+      "sensível"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576717965",
+    "thumbnail": "/assets/emote-3576717965.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714369325"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "124300863605270",
+    "name": "Sitting Sad Crying",
+    "category": "Muito triste",
+    "description": "Pose sentada de choro para uma cena de tristeza e isolamento.",
+    "tags": [
+      "choro",
+      "chorar",
+      "sentado",
+      "solidão",
+      "tristeza"
+    ],
+    "creator": "SukiDrop 落",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/124300863605270",
+    "thumbnail": "/assets/emote-124300863605270.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 60,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "122660651264618",
+    "name": "Crying Curled Ball",
+    "category": "Muito triste",
+    "description": "O avatar se encolhe em uma bola e chora, em uma reação de tristeza intensa.",
+    "tags": [
+      "choro",
+      "encolhido",
+      "decepção",
+      "drama",
+      "tristeza"
+    ],
+    "creator": "Kursed Animations",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/122660651264618",
+    "thumbnail": "/assets/emote-122660651264618.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "81959243147756",
+    "name": "Crying on floor",
+    "category": "Muito triste",
+    "description": "Choro no chão para uma derrota dramática ou uma cena emocional.",
+    "tags": [
+      "choro",
+      "chão",
+      "drama",
+      "derrota",
+      "chorar"
+    ],
+    "creator": "Emote Ugcs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/81959243147756",
+    "thumbnail": "/assets/emote-81959243147756.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3360689775",
+    "name": "Salute",
+    "category": "Confirmação",
+    "description": "Continência para mostrar respeito ou confirmar que entendeu uma ordem.",
+    "tags": [
+      "entendido",
+      "respeito",
+      "ok",
+      "continência"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3360689775",
+    "thumbnail": "/assets/emote-3360689775.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 0,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714389988"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "137980489530934",
+    "name": "Nodding Yes ✅",
+    "category": "Confirmação",
+    "description": "Aceno afirmativo com a cabeça para responder sim em diálogos.",
+    "tags": [
+      "sim",
+      "cabeça",
+      "concordar",
+      "positivo"
+    ],
+    "creator": "Dream UGCs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/137980489530934",
+    "thumbnail": "/assets/emote-137980489530934.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3934984583",
+    "name": "Get Out",
+    "category": "Negação",
+    "description": "Reação de rejeição para mandar embora ou reprovar uma ideia absurda.",
+    "tags": [
+      "fora",
+      "rejeitar",
+      "recusar",
+      "reprovar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3934984583",
+    "thumbnail": "/assets/emote-3934984583.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714345862"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "94459884375170",
+    "name": "No!",
+    "category": "Negação",
+    "description": "Uma negativa enfática para deixar clara uma recusa na cena.",
+    "tags": [
+      "não",
+      "negar",
+      "recusar",
+      "rejeição"
+    ],
+    "creator": "K4RM4 EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/94459884375170",
+    "thumbnail": "/assets/emote-94459884375170.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "7202896732",
+    "name": "Boxing Punch - KSI",
+    "category": "Raiva",
+    "description": "Sequência de socos de boxe para encenar um confronto ou desafio.",
+    "tags": [
+      "boxe",
+      "socos",
+      "confronto",
+      "desafio"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/7202896732",
+    "thumbnail": "/assets/emote-7202896732.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 170,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10717116749"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4849497510",
+    "name": "Power Blast",
+    "category": "Raiva",
+    "description": "Pose de explosão de poder para um momento de fúria ou transformação.",
+    "tags": [
+      "poder",
+      "explosão",
+      "fúria",
+      "transformação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4849497510",
+    "thumbnail": "/assets/emote-4849497510.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 120,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714389396"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3934986896",
+    "name": "Dizzy",
+    "category": "Surpresa",
+    "description": "Reação de tontura para um susto, confusão ou gag de desequilíbrio.",
+    "tags": [
+      "tonto",
+      "confuso",
+      "desequilíbrio",
+      "susto"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3934986896",
+    "thumbnail": "/assets/emote-3934986896.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 175,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714066964"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576968026",
+    "name": "Shrug",
+    "category": "Surpresa",
+    "description": "Encolher de ombros para dizer que não sabe ou não entendeu.",
+    "tags": [
+      "não sei",
+      "ombros",
+      "dúvida",
+      "incerteza"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576968026",
+    "thumbnail": "/assets/emote-3576968026.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 0,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714374484"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5915776835",
+    "name": "High Wave",
+    "category": "Cumprimentos",
+    "description": "Aceno alto para cumprimentar alguém ou chamar atenção à distância.",
+    "tags": [
+      "oi",
+      "acenar",
+      "longe",
+      "multidão"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5915776835",
+    "thumbnail": "/assets/emote-5915776835.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714362852"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4646306583",
+    "name": "Curtsy",
+    "category": "Cumprimentos",
+    "description": "Reverência delicada para uma apresentação ou cumprimento formal.",
+    "tags": [
+      "reverência",
+      "educação",
+      "formal",
+      "apresentação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4646306583",
+    "thumbnail": "/assets/emote-4646306583.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714061912"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5230615437",
+    "name": "Beckon",
+    "category": "Cumprimentos",
+    "description": "Gesto para chamar alguém e convidar a pessoa a se aproximar.",
+    "tags": [
+      "vem",
+      "chamar",
+      "aproximar",
+      "convite"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5230615437",
+    "thumbnail": "/assets/emote-5230615437.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713984554"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "6869813008",
+    "name": "Samba",
+    "category": "Dança",
+    "description": "Dança com clima de festa para cenas leves e comemorações em grupo.",
+    "tags": [
+      "samba",
+      "festa",
+      "dançar",
+      "alegria"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/6869813008",
+    "thumbnail": "/assets/emote-6869813008.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 100,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714386947"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5917570207",
+    "name": "Floss Dance",
+    "category": "Dança",
+    "description": "O clássico floss para momentos divertidos e transições descontraídas.",
+    "tags": [
+      "floss",
+      "dançar",
+      "clássico",
+      "diversão"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5917570207",
+    "thumbnail": "/assets/emote-5917570207.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714340543"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5938365243",
+    "name": "Dolphin Dance",
+    "category": "Dança",
+    "description": "Dança descontraída para inserir humor e movimento em uma gravação.",
+    "tags": [
+      "dançar",
+      "humor",
+      "festa",
+      "divertido"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5938365243",
+    "thumbnail": "/assets/emote-5938365243.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 100,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714068222"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576721660",
+    "name": "Robot",
+    "category": "Dança",
+    "description": "Movimentos de robô para humor mecânico e cenas de dança.",
+    "tags": [
+      "robô",
+      "mecânico",
+      "dançar",
+      "engraçado"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576721660",
+    "thumbnail": "/assets/emote-3576721660.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 250,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714392151"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3762641826",
+    "name": "Side to Side",
+    "category": "Dança",
+    "description": "Dança lateral para acompanhar uma música ou animar uma cena.",
+    "tags": [
+      "lateral",
+      "dançar",
+      "música",
+      "ritmo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3762641826",
+    "thumbnail": "/assets/emote-3762641826.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 100,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714366910"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3716633898",
+    "name": "Twirl",
+    "category": "Dança",
+    "description": "Giros para uma entrada alegre, apresentação ou transição de cena.",
+    "tags": [
+      "girar",
+      "rodopiar",
+      "dança",
+      "entrada"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3716633898",
+    "thumbnail": "/assets/emote-3716633898.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 250,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714293450"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4689362868",
+    "name": "Sleep",
+    "category": "Descanso",
+    "description": "Pose de sono para cenas de cansaço, espera ou descanso.",
+    "tags": [
+      "dormir",
+      "sono",
+      "cansaço",
+      "descansar"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4689362868",
+    "thumbnail": "/assets/emote-4689362868.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714360343"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4940597758",
+    "name": "Cower",
+    "category": "Medo",
+    "description": "Reação de se encolher para encenar medo ou insegurança.",
+    "tags": [
+      "medo",
+      "receio",
+      "encolher",
+      "insegurança"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4940597758",
+    "thumbnail": "/assets/emote-4940597758.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "4940563117"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3823158750",
+    "name": "Godlike",
+    "category": "Confiança",
+    "description": "Pose imponente para entradas triunfais e momentos de poder.",
+    "tags": [
+      "poder",
+      "confiança",
+      "triunfo",
+      "épico"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3823158750",
+    "thumbnail": "/assets/emote-3823158750.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714347256"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5104377791",
+    "name": "Hero Landing",
+    "category": "Confiança",
+    "description": "Aterrissagem de herói para uma entrada marcante na gravação.",
+    "tags": [
+      "herói",
+      "entrada",
+      "aterrissagem",
+      "ação"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5104377791",
+    "thumbnail": "/assets/emote-5104377791.png",
+    "addedBy": null,
+    "createdAt": "2026-11-16T23:47:52.897Z",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714360164"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "82607397127940",
+    "name": "Happy Sit 😄",
+    "category": "Feliz",
+    "description": "Pose sentada com uma proposta alegre para diálogos e cenas leves.",
+    "tags": [
+      "sentado",
+      "alegria",
+      "pose",
+      "conversa"
+    ],
+    "creator": "EMOTES EMOTES EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/82607397127940",
+    "thumbnail": "/assets/emote-82607397127940.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "119727231951292",
+    "name": "Silly Happy Spin",
+    "category": "Feliz",
+    "description": "Giro divertido com clima de felicidade para uma reação espontânea.",
+    "tags": [
+      "giro",
+      "alegria",
+      "diversão",
+      "espontâneo"
+    ],
+    "creator": "SillySlowGoose",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/119727231951292",
+    "thumbnail": "/assets/emote-119727231951292.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "112716621133061",
+    "name": "Happy Dog Pet Emote",
+    "category": "Feliz",
+    "description": "Pulinhos alegres com tema de cachorro para uma reação brincalhona.",
+    "tags": [
+      "cachorro",
+      "carinho",
+      "alegria",
+      "brincar"
+    ],
+    "creator": "Cool Emotes!",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/112716621133061",
+    "thumbnail": "/assets/emote-112716621133061.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "84996869989119",
+    "name": "♡ : Cutesy Gacha Life happy profile pose [OG]",
+    "category": "Feliz",
+    "description": "Pose alegre inspirada em Gacha Life para apresentar o avatar em cena.",
+    "tags": [
+      "gacha",
+      "alegria",
+      "pose",
+      "apresentação"
+    ],
+    "creator": "lexly's nostalgia",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/84996869989119",
+    "thumbnail": "/assets/emote-84996869989119.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "112157538059399",
+    "name": "Happy Catgirl Pose",
+    "category": "Feliz",
+    "description": "Pose de catgirl feliz para uma reação leve com tema de gatinho.",
+    "tags": [
+      "gatinho",
+      "alegria",
+      "pose",
+      "fofo"
+    ],
+    "creator": "Panda_Ugcs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/112157538059399",
+    "thumbnail": "/assets/emote-112157538059399.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "94454346043409",
+    "name": "Happy",
+    "category": "Feliz",
+    "description": "Passos de dança alegres para uma comemoração cheia de boas vibrações.",
+    "tags": [
+      "alegria",
+      "positivo",
+      "comemoração"
+    ],
+    "creator": "Game Name.",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/94454346043409",
+    "thumbnail": "/assets/emote-94454346043409.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "76671703417899",
+    "name": "Happy",
+    "category": "Feliz",
+    "description": "Reação com tema de felicidade para variar as cenas de bom humor.",
+    "tags": [
+      "felicidade",
+      "reação",
+      "bom humor"
+    ],
+    "creator": "ANIMATIN",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/76671703417899",
+    "thumbnail": "/assets/emote-76671703417899.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "130356414280539",
+    "name": "Happy ",
+    "category": "Feliz",
+    "description": "Emote alegre para representar satisfação em uma conversa.",
+    "tags": [
+      "alegria",
+      "satisfação",
+      "conversa"
+    ],
+    "creator": "Prodigy UGCs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/130356414280539",
+    "thumbnail": "/assets/emote-130356414280539.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "137539669926928",
+    "name": "[BEST] Sitting Happy Idle",
+    "category": "Feliz",
+    "description": "Pose sentada de felicidade para uma cena tranquila entre amigos.",
+    "tags": [
+      "sentado",
+      "alegria",
+      "amigos",
+      "pose"
+    ],
+    "creator": "Emote Nation",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/137539669926928",
+    "thumbnail": "/assets/emote-137539669926928.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "96306407054944",
+    "name": "[L] ♡ hehe! happy little wiggles",
+    "category": "Feliz",
+    "description": "Pequenos movimentos alegres para uma reação brincalhona e delicada.",
+    "tags": [
+      "movimento",
+      "brincadeira",
+      "alegria",
+      "fofo"
+    ],
+    "creator": "womo",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/96306407054944",
+    "thumbnail": "/assets/emote-96306407054944.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "90732297369620",
+    "name": "Happy Cutie Dance",
+    "category": "Feliz",
+    "description": "Dança fofa com tema de felicidade para deixar a gravação mais leve.",
+    "tags": [
+      "dança",
+      "alegria",
+      "fofo",
+      "leve"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/90732297369620",
+    "thumbnail": "/assets/emote-90732297369620.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92129286446617",
+    "name": "MM2 Sitting Happy",
+    "category": "Feliz",
+    "description": "Pose sentada com clima feliz e referência a MM2 para variar os takes.",
+    "tags": [
+      "sentado",
+      "felicidade",
+      "mm2",
+      "pose"
+    ],
+    "creator": "FluxEmotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92129286446617",
+    "thumbnail": "/assets/emote-92129286446617.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "77519822285697",
+    "name": "Little Wave",
+    "category": "Cumprimentos",
+    "description": "Uma opção de pequeno aceno para cumprimentar os amigos e variar as entradas em cena.",
+    "tags": [
+      "aceno",
+      "olá",
+      "cumprimentar"
+    ],
+    "creator": "Jeny_Punker Studio",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/77519822285697",
+    "thumbnail": "/assets/emote-77519822285697.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "120635007771289",
+    "name": "Annyeong (안녕)",
+    "category": "Cumprimentos",
+    "description": "Saudação de “olá” para uma chegada amigável. O nome faz referência ao cumprimento coreano.",
+    "tags": [
+      "olá",
+      "saudação",
+      "amigável"
+    ],
+    "creator": "Yukare",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/120635007771289",
+    "thumbnail": "/assets/emote-120635007771289.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "112828841042848",
+    "name": "Salute",
+    "category": "Cumprimentos",
+    "description": "Uma alternativa de saudação formal para apresentações e encontros entre personagens.",
+    "tags": [
+      "saudação",
+      "formal",
+      "apresentação"
+    ],
+    "creator": "Gentle Blox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/112828841042848",
+    "thumbnail": "/assets/emote-112828841042848.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "100361639778145",
+    "name": "Attack on Titan Salute",
+    "category": "Cumprimentos",
+    "description": "Saudação inspirada em Attack on Titan, indicada para cenas temáticas e homenagens à série.",
+    "tags": [
+      "saudação",
+      "anime",
+      "attack on titan"
+    ],
+    "creator": "RawEggTheGreatIX",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/100361639778145",
+    "thumbnail": "/assets/emote-100361639778145.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "118569043197403",
+    "name": "Eren Salute",
+    "category": "Cumprimentos",
+    "description": "Outra opção de saudação com referência a Eren, útil para encontros em histórias inspiradas em anime.",
+    "tags": [
+      "saudação",
+      "eren",
+      "anime"
+    ],
+    "creator": "P̲r̲o̲x̲i̲m̲i̲t̲y̲",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/118569043197403",
+    "thumbnail": "/assets/emote-118569043197403.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "116277033231215",
+    "name": "Salute (Proper)",
+    "category": "Cumprimentos",
+    "description": "Saudação apresentada pelo criador como uma versão formal e correta do gesto.",
+    "tags": [
+      "saudação",
+      "formal",
+      "respeito"
+    ],
+    "creator": "Ipan_Syah",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/116277033231215",
+    "thumbnail": "/assets/emote-116277033231215.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "106640307740815",
+    "name": "[👋] Handshake",
+    "category": "Cumprimentos",
+    "description": "Emote com proposta de aperto de mão para encontros e cumprimentos entre personagens.",
+    "tags": [
+      "aperto de mão",
+      "encontro",
+      "cumprimentar"
+    ],
+    "creator": "Dwag Studios",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/106640307740815",
+    "thumbnail": "/assets/emote-106640307740815.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "96416658728463",
+    "name": "Attack On Titan Salute",
+    "category": "Cumprimentos",
+    "description": "Versão de saudação de Attack on Titan para demonstrar respeito e identificação com a série.",
+    "tags": [
+      "saudação",
+      "anime",
+      "respeito"
+    ],
+    "creator": "Verzed",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/96416658728463",
+    "thumbnail": "/assets/emote-96416658728463.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "132680656473478",
+    "name": "Cute wave ",
+    "category": "Cumprimentos",
+    "description": "Aceno para poses e cumprimentos amigáveis, conforme a proposta descrita pelo criador.",
+    "tags": [
+      "aceno",
+      "pose",
+      "olá"
+    ],
+    "creator": "cassis",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/132680656473478",
+    "thumbnail": "/assets/emote-132680656473478.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "102625716057964",
+    "name": "/e Wave",
+    "category": "Cumprimentos",
+    "description": "Uma versão de aceno para dizer “oi” e marcar a chegada de um personagem na cena.",
+    "tags": [
+      "aceno",
+      "oi",
+      "chegada"
+    ],
+    "creator": "victor's ugc",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/102625716057964",
+    "thumbnail": "/assets/emote-102625716057964.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "106277300733329",
+    "name": "Quick Wave Emote",
+    "category": "Cumprimentos",
+    "description": "Aceno curto para dizer “olá” ou “tchau”, de acordo com a descrição oficial do emote.",
+    "tags": [
+      "aceno rápido",
+      "olá",
+      "tchau"
+    ],
+    "creator": "Cvuls Community",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/106277300733329",
+    "thumbnail": "/assets/emote-106277300733329.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "138340039708408",
+    "name": "Agreeing",
+    "category": "Confirmação",
+    "description": "Um aceno de cabeça simples para demonstrar que você concorda com a outra pessoa.",
+    "tags": [
+      "sim",
+      "cabeça",
+      "aprovação"
+    ],
+    "creator": "Xxaaron_546",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/138340039708408",
+    "thumbnail": "/assets/emote-138340039708408.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "80173277129810",
+    "name": "Agreeing",
+    "category": "Confirmação",
+    "description": "Uma alternativa de resposta afirmativa para diálogos rápidos e decisões em grupo.",
+    "tags": [
+      "afirmação",
+      "concordar",
+      "resposta"
+    ],
+    "creator": "X87XQ",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/80173277129810",
+    "thumbnail": "/assets/emote-80173277129810.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "124269295401400",
+    "name": "Agreed [Thumbs Up]",
+    "category": "Confirmação",
+    "description": "Sinal de positivo para aprovar uma ideia, confirmar uma escolha ou elogiar um resultado.",
+    "tags": [
+      "positivo",
+      "aprovação",
+      "concordar"
+    ],
+    "creator": "MochiCharm",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/124269295401400",
+    "thumbnail": "/assets/emote-124269295401400.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "105310031904347",
+    "name": "Agreeing Handshake",
+    "category": "Confirmação",
+    "description": "Aperto de mão com proposta de acordo de negócios. Combina com contratos e parcerias na história.",
+    "tags": [
+      "acordo",
+      "aperto de mão",
+      "parceria"
+    ],
+    "creator": "24pm",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/105310031904347",
+    "thumbnail": "/assets/emote-105310031904347.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "125851211526383",
+    "name": "Nodding YES / Agree",
+    "category": "Confirmação",
+    "description": "Confirmação com a cabeça, útil para responder “sim” em conversas sem interromper o take.",
+    "tags": [
+      "sim",
+      "cabeça",
+      "concordância"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/125851211526383",
+    "thumbnail": "/assets/emote-125851211526383.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "117714843104143",
+    "name": "[YES] Nodding Head [HEAD ONLY]",
+    "category": "Confirmação",
+    "description": "Move somente a cabeça para dizer “sim”, mantendo o restante do corpo na pose.",
+    "tags": [
+      "sim",
+      "só cabeça",
+      "confirmação"
+    ],
+    "creator": "Keyframe Marketplace",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/117714843104143",
+    "thumbnail": "/assets/emote-117714843104143.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "106391222049620",
+    "name": "Excited Yes",
+    "category": "Confirmação",
+    "description": "Uma confirmação rápida com a cabeça para aceitar uma proposta com entusiasmo.",
+    "tags": [
+      "sim",
+      "rápido",
+      "entusiasmo"
+    ],
+    "creator": "Neura",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/106391222049620",
+    "thumbnail": "/assets/emote-106391222049620.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "93390034833597",
+    "name": "Nodding Yes",
+    "category": "Confirmação",
+    "description": "Outra opção de aceno afirmativo com a cabeça para variar respostas positivas nas gravações.",
+    "tags": [
+      "sim",
+      "aceno",
+      "resposta"
+    ],
+    "creator": "Anson Luk",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/93390034833597",
+    "thumbnail": "/assets/emote-93390034833597.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "84138923135954",
+    "name": "Big Hand Yes 👍 ",
+    "category": "Confirmação",
+    "description": "Sinal de positivo com a proposta de uma mão grande. Opção para uma aprovação mais chamativa.",
+    "tags": [
+      "positivo",
+      "mão grande",
+      "aprovação"
+    ],
+    "creator": "shadowbonnie4573",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/84138923135954",
+    "thumbnail": "/assets/emote-84138923135954.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "76208293584610",
+    "name": "Crossed Arms Nod Head Yes",
+    "category": "Confirmação",
+    "description": "Combina braços cruzados e confirmação com a cabeça para uma aprovação de atitude mais firme.",
+    "tags": [
+      "braços cruzados",
+      "sim",
+      "aprovação"
+    ],
+    "creator": "ZX fits",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/76208293584610",
+    "thumbnail": "/assets/emote-76208293584610.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "121558579858176",
+    "name": "SUPER YES",
+    "category": "Confirmação",
+    "description": "Uma afirmação enfática para momentos em que o personagem aceita a ideia com muita vontade.",
+    "tags": [
+      "sim",
+      "ênfase",
+      "aceitar"
+    ],
+    "creator": "GrandeValk",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/121558579858176",
+    "thumbnail": "/assets/emote-121558579858176.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "115344615095212",
+    "name": "Angry Rage Emote",
+    "category": "Raiva",
+    "description": "Reação de fúria para marcar o momento em que o personagem perde a calma.",
+    "tags": [
+      "fúria",
+      "raiva",
+      "irritação"
+    ],
+    "creator": "Blemotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/115344615095212",
+    "thumbnail": "/assets/emote-115344615095212.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "127496944347146",
+    "name": "Angry Rage Emote😡",
+    "category": "Raiva",
+    "description": "Emote de raiva intensa para uma resposta dramática de irritação.",
+    "tags": [
+      "raiva",
+      "fúria",
+      "dramático"
+    ],
+    "creator": "Lucky Emotes!",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/127496944347146",
+    "thumbnail": "/assets/emote-127496944347146.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "99482091578274",
+    "name": "Angry",
+    "category": "Raiva",
+    "description": "Reação de raiva para um personagem irritado com o que acabou de acontecer.",
+    "tags": [
+      "raiva",
+      "irritação",
+      "reação"
+    ],
+    "creator": "AFTERMOVE",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/99482091578274",
+    "thumbnail": "/assets/emote-99482091578274.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "94938095956442",
+    "name": "Angry Scream",
+    "category": "Raiva",
+    "description": "Grito de raiva para uma explosão dramática de irritação no roteiro.",
+    "tags": [
+      "grito",
+      "raiva",
+      "fúria"
+    ],
+    "creator": "Super Duper Rockstar Clothing",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/94938095956442",
+    "thumbnail": "/assets/emote-94938095956442.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "73079617350165",
+    "name": "angry stomp",
+    "category": "Raiva",
+    "description": "Batida de pé de raiva para mostrar impaciência ou protesto.",
+    "tags": [
+      "bater pé",
+      "raiva",
+      "impaciência",
+      "protesto"
+    ],
+    "creator": "444 EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/73079617350165",
+    "thumbnail": "/assets/emote-73079617350165.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "82738612551935",
+    "name": "ANGRY 😡",
+    "category": "Raiva",
+    "description": "Reação enfurecida para responder a uma provocação ou contrariedade.",
+    "tags": [
+      "raiva",
+      "fúria",
+      "provocação"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/82738612551935",
+    "thumbnail": "/assets/emote-82738612551935.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "78892921889565",
+    "name": "Angry Idle",
+    "category": "Raiva",
+    "description": "Postura parada de irritação para manter a expressão de raiva durante um diálogo.",
+    "tags": [
+      "parado",
+      "raiva",
+      "irritação",
+      "postura"
+    ],
+    "creator": "55Epa",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/78892921889565",
+    "thumbnail": "/assets/emote-78892921889565.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "80378125299533",
+    "name": "GoAnimate Angry Pose",
+    "category": "Raiva",
+    "description": "Pose brava inspirada em GoAnimate para uma bronca ou reclamação teatral.",
+    "tags": [
+      "bronca",
+      "pose",
+      "raiva",
+      "reclamação"
+    ],
+    "creator": "OhHiNick",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/80378125299533",
+    "thumbnail": "/assets/emote-80378125299533.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "105528466269817",
+    "name": "Angry Arm Swing (TV)",
+    "category": "Raiva",
+    "description": "Movimento irritado com o braço direito para uma reação física exagerada.",
+    "tags": [
+      "braço",
+      "irritação",
+      "raiva",
+      "exagero"
+    ],
+    "creator": "Sketchy Biz",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/105528466269817",
+    "thumbnail": "/assets/emote-105528466269817.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "121112851513057",
+    "name": "Angry Arms Crossed Idle",
+    "category": "Raiva",
+    "description": "Postura de braços cruzados para mostrar um personagem bravo ou contrariado.",
+    "tags": [
+      "braços cruzados",
+      "raiva",
+      "contrariedade",
+      "postura"
+    ],
+    "creator": "prodbyxvr",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/121112851513057",
+    "thumbnail": "/assets/emote-121112851513057.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "103366026917267",
+    "name": "🔥 Angry Rage Emote 🔥",
+    "category": "Raiva",
+    "description": "Reação de fúria para reforçar uma cena de irritação intensa.",
+    "tags": [
+      "fúria",
+      "raiva",
+      "intenso"
+    ],
+    "creator": "KrutieEmoteSigma",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/103366026917267",
+    "thumbnail": "/assets/emote-103366026917267.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "91227380238329",
+    "name": "Angry Rage",
+    "category": "Raiva",
+    "description": "Reação em modo de fúria para uma virada de humor explosiva na história.",
+    "tags": [
+      "fúria",
+      "raiva",
+      "explosão"
+    ],
+    "creator": "wlorkwear",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/91227380238329",
+    "thumbnail": "/assets/emote-91227380238329.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "112226299478698",
+    "name": "Sad Sideways Lying Pose V2",
+    "category": "Triste",
+    "description": "Pose deitada de lado com tema triste; uma opção para pausas dramáticas silenciosas.",
+    "tags": [
+      "tristeza",
+      "deitado",
+      "silêncio",
+      "pose"
+    ],
+    "creator": "kawiko",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/112226299478698",
+    "thumbnail": "/assets/emote-112226299478698.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "91234757662928",
+    "name": "Sad Lonely Sit Pose",
+    "category": "Triste",
+    "description": "Pose sentada de solidão para mostrar um personagem isolado do grupo.",
+    "tags": [
+      "solidão",
+      "sentado",
+      "tristeza"
+    ],
+    "creator": "Biscuit Hub Sector",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/91234757662928",
+    "thumbnail": "/assets/emote-91234757662928.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "93763176187001",
+    "name": "Absolute Sadness Elden Ring Emote",
+    "category": "Triste",
+    "description": "Reação de abatimento inspirada no gesto de desânimo de Elden Ring.",
+    "tags": [
+      "abatimento",
+      "desânimo",
+      "dramático"
+    ],
+    "creator": "Daylight UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/93763176187001",
+    "thumbnail": "/assets/emote-93763176187001.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "129224812221086",
+    "name": "Sadness Sit / Sitting",
+    "category": "Triste",
+    "description": "Pose sentada de tristeza para cenas de decepção com amigos ou isolamento.",
+    "tags": [
+      "sentado",
+      "tristeza",
+      "decepção",
+      "solidão"
+    ],
+    "creator": "ClassicLegacy UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/129224812221086",
+    "thumbnail": "/assets/emote-129224812221086.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "91090072020613",
+    "name": "🐾 sad cat sit :c",
+    "category": "Triste",
+    "description": "Pose sentada com tema de gatinho triste para uma reação delicada e melancólica.",
+    "tags": [
+      "gatinho",
+      "sentado",
+      "melancolia",
+      "tristeza"
+    ],
+    "creator": "kebyo",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/91090072020613",
+    "thumbnail": "/assets/emote-91090072020613.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "89857229755782",
+    "name": "Sad",
+    "category": "Triste",
+    "description": "Uma reação simples de tristeza para cenas em que o personagem está para baixo sem explicar o motivo.",
+    "tags": [
+      "tristeza",
+      "melancolia",
+      "reação"
+    ],
+    "creator": "21ѕt",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/89857229755782",
+    "thumbnail": "/assets/emote-89857229755782.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92275751196875",
+    "name": "sad vampiric sit",
+    "category": "Triste",
+    "description": "Pose sentada de tristeza com tema vampírico para momentos mais sombrios da gravação.",
+    "tags": [
+      "sentado",
+      "vampiro",
+      "sombrio",
+      "tristeza"
+    ],
+    "creator": "nvr 4evr",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92275751196875",
+    "thumbnail": "/assets/emote-92275751196875.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 95,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "80306387453703",
+    "name": "Sad",
+    "category": "Triste",
+    "description": "Pose sentada com as pernas recolhidas para transmitir tristeza e recolhimento.",
+    "tags": [
+      "sentado",
+      "recolhimento",
+      "tristeza",
+      "vulnerabilidade"
+    ],
+    "creator": "EVIL BULLDOG CLUB",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/80306387453703",
+    "thumbnail": "/assets/emote-80306387453703.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "116612854274751",
+    "name": "▣ Sad ▣ - JL BM Studio.",
+    "category": "Triste",
+    "description": "Emote de tema triste da JL BM Studio para uma reação melancólica no roteiro.",
+    "tags": [
+      "tristeza",
+      "melancolia",
+      "reação"
+    ],
+    "creator": "JL BM Studio.",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/116612854274751",
+    "thumbnail": "/assets/emote-116612854274751.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "80144240019571",
+    "name": "Sad Sit",
+    "category": "Triste",
+    "description": "Pose sentada de desânimo com proposta delicada para cenas de abatimento.",
+    "tags": [
+      "sentado",
+      "desânimo",
+      "abatimento"
+    ],
+    "creator": "Emote Pop!",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/80144240019571",
+    "thumbnail": "/assets/emote-80144240019571.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "75261730394012",
+    "name": "Sad Eva Child/Shinji Pose/Evangelion",
+    "category": "Triste",
+    "description": "Pose sentada inspirada em Shinji, com cabeça baixa e mãos unidas, para momentos de conflito interno.",
+    "tags": [
+      "sentado",
+      "cabeça baixa",
+      "conflito",
+      "tristeza"
+    ],
+    "creator": "[clothing club]",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/75261730394012",
+    "thumbnail": "/assets/emote-75261730394012.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "71799379937166",
+    "name": "♡ adorable kawaii curled up sad girl pose",
+    "category": "Triste",
+    "description": "Pose encolhida com tema triste para mostrar um personagem mais retraído.",
+    "tags": [
+      "encolhido",
+      "retraído",
+      "tristeza",
+      "pose"
+    ],
+    "creator": "pawtaztic",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/71799379937166",
+    "thumbnail": "/assets/emote-71799379937166.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92028852909434",
+    "name": "No!",
+    "category": "Negação",
+    "description": "Uma resposta de “isso nunca vai acontecer” para recusas decididas na gravação.",
+    "tags": [
+      "não",
+      "recusa",
+      "impossível",
+      "discordar"
+    ],
+    "creator": "interest1nq",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92028852909434",
+    "thumbnail": "/assets/emote-92028852909434.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "95992192839529",
+    "name": "No",
+    "category": "Negação",
+    "description": "Opção de negativa para responder “não” em diálogos e contracenas.",
+    "tags": [
+      "não",
+      "responder",
+      "discordar",
+      "diálogo"
+    ],
+    "creator": "Shop UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/95992192839529",
+    "thumbnail": "/assets/emote-95992192839529.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "104061926203510",
+    "name": "No.",
+    "category": "Negação",
+    "description": "Balança a cabeça rapidamente em sinal de não, conforme a descrição oficial.",
+    "tags": [
+      "não",
+      "cabeça",
+      "negar",
+      "rápido"
+    ],
+    "creator": "UGC Side Hustle",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/104061926203510",
+    "thumbnail": "/assets/emote-104061926203510.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "83409752409918",
+    "name": "No",
+    "category": "Negação",
+    "description": "O criador descreve como negar algo ou alguém; serve para marcar uma recusa na cena.",
+    "tags": [
+      "negar",
+      "recusar",
+      "não",
+      "rejeição"
+    ],
+    "creator": "grupo oficial de jorge",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/83409752409918",
+    "thumbnail": "/assets/emote-83409752409918.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 67,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "133131197300340",
+    "name": "No.",
+    "category": "Negação",
+    "description": "Negativa insistente para repetir um “não” e encerrar uma proposta no diálogo.",
+    "tags": [
+      "não",
+      "insistir",
+      "resposta",
+      "conversa"
+    ],
+    "creator": "SnappyFear",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/133131197300340",
+    "thumbnail": "/assets/emote-133131197300340.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 125,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92833428896077",
+    "name": "No! don't!",
+    "category": "Negação",
+    "description": "Reação de “não quero que isso aconteça”, útil para impedir uma decisão na história.",
+    "tags": [
+      "não",
+      "impedir",
+      "recusa",
+      "protesto"
+    ],
+    "creator": "XNDUIW Group",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92833428896077",
+    "thumbnail": "/assets/emote-92833428896077.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 280,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "105342211434199",
+    "name": "✋STOP🙅‍♂️",
+    "category": "Negação",
+    "description": "Estende a mão e balança a cabeça, segundo o criador, para um “pare” dramático.",
+    "tags": [
+      "pare",
+      "não",
+      "mão",
+      "impedir"
+    ],
+    "creator": "Motion Craft UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/105342211434199",
+    "thumbnail": "/assets/emote-105342211434199.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 65,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "127994504442192",
+    "name": "Stop Fighting! ",
+    "category": "Negação",
+    "description": "O criador recomenda para pedir que os amigos parem de brigar. Sugestão para interromper uma discussão.",
+    "tags": [
+      "pare",
+      "discussão",
+      "interromper",
+      "paz"
+    ],
+    "creator": "The Bleu",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/127994504442192",
+    "thumbnail": "/assets/emote-127994504442192.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "129579733620258",
+    "name": "Head Shake",
+    "category": "Negação",
+    "description": "Movimento de cabeça descrito pelo criador como intenso; opção para uma negativa exagerada.",
+    "tags": [
+      "cabeça",
+      "não",
+      "discordar",
+      "exagero"
+    ],
+    "creator": "STUDIO KAMI",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/129579733620258",
+    "thumbnail": "/assets/emote-129579733620258.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "138578820421052",
+    "name": "Head Shake",
+    "category": "Negação",
+    "description": "Emote de balançar a cabeça, sugerido para reprovar uma tentativa ou ideia na cena.",
+    "tags": [
+      "cabeça",
+      "reprovar",
+      "discordar",
+      "não"
+    ],
+    "creator": "notRiley404",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/138578820421052",
+    "thumbnail": "/assets/emote-138578820421052.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "91380965860245",
+    "name": "Nuh Uh! (Finger Wiggle)",
+    "category": "Negação",
+    "description": "Gesto de “nuh uh” com o dedo indicado no título. O criador recomenda avatar com corpo Blocky.",
+    "tags": [
+      "não",
+      "dedo",
+      "recusar",
+      "blocky"
+    ],
+    "creator": "Bungus Productions",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/91380965860245",
+    "thumbnail": "/assets/emote-91380965860245.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "79062221839395",
+    "name": "Nod of Disapproval",
+    "category": "Negação",
+    "description": "Negativa com a cabeça; a descrição oficial chama o gesto de sinal universal de discordância.",
+    "tags": [
+      "cabeça",
+      "discordância",
+      "não",
+      "reprovar"
+    ],
+    "creator": "Lonestar UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/79062221839395",
+    "thumbnail": "/assets/emote-79062221839395.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "140621901208063",
+    "name": "Happy Jumps",
+    "category": "Muito feliz",
+    "description": "Saltos felizes para uma notícia que merece muita comemoração.",
+    "tags": [
+      "pulos",
+      "felicidade",
+      "comemorar",
+      "notícia"
+    ],
+    "creator": "MochiCharm",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/140621901208063",
+    "thumbnail": "/assets/emote-140621901208063.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "78801501730748",
+    "name": "Happy Kawaii Jump ",
+    "category": "Muito feliz",
+    "description": "Salto alegre com estilo kawaii para uma reação de empolgação.",
+    "tags": [
+      "pular",
+      "kawaii",
+      "alegria",
+      "empolgação"
+    ],
+    "creator": "DreamyEyes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/78801501730748",
+    "thumbnail": "/assets/emote-78801501730748.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "134895901279334",
+    "name": "Happy Celebration",
+    "category": "Muito feliz",
+    "description": "Dança de celebração inspirada em Bob’s Burgers para um momento muito feliz.",
+    "tags": [
+      "celebração",
+      "vitória",
+      "alegria",
+      "festa"
+    ],
+    "creator": "BAUBAU EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/134895901279334",
+    "thumbnail": "/assets/emote-134895901279334.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "96558453936394",
+    "name": "Excited Jumps",
+    "category": "Muito feliz",
+    "description": "Pulos de empolgação para demonstrar que você mal consegue ficar parado.",
+    "tags": [
+      "pulos",
+      "empolgação",
+      "euforia",
+      "reação"
+    ],
+    "creator": "Kitzyy.a",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/96558453936394",
+    "thumbnail": "/assets/emote-96558453936394.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "107785096168432",
+    "name": "Excited Jumping",
+    "category": "Muito feliz",
+    "description": "Saltos animados para uma reação de entusiasmo intenso.",
+    "tags": [
+      "saltos",
+      "entusiasmo",
+      "euforia",
+      "alegria"
+    ],
+    "creator": "AZTRX",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/107785096168432",
+    "thumbnail": "/assets/emote-107785096168432.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "131727710044659",
+    "name": "Excited Tappy Jump",
+    "category": "Muito feliz",
+    "description": "Pulinhos de empolgação com um ritmo brincalhão.",
+    "tags": [
+      "pulos",
+      "ritmo",
+      "empolgação",
+      "brincadeira"
+    ],
+    "creator": "Lockjaws UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/131727710044659",
+    "thumbnail": "/assets/emote-131727710044659.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "132828694527761",
+    "name": "🪙 Silly Yippee Jumping of Pure Excitement",
+    "category": "Muito feliz",
+    "description": "Pulos divertidos de entusiasmo para uma comemoração exagerada.",
+    "tags": [
+      "yippee",
+      "pulos",
+      "entusiasmo",
+      "comemorar"
+    ],
+    "creator": "The Buildverse Foundry",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/132828694527761",
+    "thumbnail": "/assets/emote-132828694527761.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 75,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "104363556314126",
+    "name": "Jump For Joy Celebration",
+    "category": "Muito feliz",
+    "description": "Pular de alegria para marcar o melhor momento de uma vitória.",
+    "tags": [
+      "pular",
+      "alegria",
+      "vitória",
+      "conquista"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/104363556314126",
+    "thumbnail": "/assets/emote-104363556314126.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "90801839422125",
+    "name": "Jump of Joy",
+    "category": "Muito feliz",
+    "description": "Um salto de alegria para reagir a uma surpresa muito boa.",
+    "tags": [
+      "salto",
+      "alegria",
+      "surpresa boa",
+      "euforia"
+    ],
+    "creator": "Chap Emotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/90801839422125",
+    "thumbnail": "/assets/emote-90801839422125.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "131266416781618",
+    "name": "Super Kawaii Happy Jump!",
+    "category": "Muito feliz",
+    "description": "Salto feliz com estilo kawaii para uma reação muito animada.",
+    "tags": [
+      "salto",
+      "kawaii",
+      "empolgação",
+      "felicidade"
+    ],
+    "creator": "SenDaCherry",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/131266416781618",
+    "thumbnail": "/assets/emote-131266416781618.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "97116325283343",
+    "name": "Happy Jump!",
+    "category": "Muito feliz",
+    "description": "Saltos e pulos alegres para celebrar sem conseguir ficar parado.",
+    "tags": [
+      "pular",
+      "salto",
+      "celebrar",
+      "euforia"
+    ],
+    "creator": "moonsniper",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/97116325283343",
+    "thumbnail": "/assets/emote-97116325283343.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "116912168572273",
+    "name": "Surprised Emote",
+    "category": "Surpresa",
+    "description": "Reação de choque descrita como rápida e dramática para revelações e acontecimentos inesperados.",
+    "tags": [
+      "choque",
+      "revelação",
+      "inesperado"
+    ],
+    "creator": "0nlymee",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/116912168572273",
+    "thumbnail": "/assets/emote-116912168572273.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "107441483310642",
+    "name": "Shook 😱",
+    "category": "Surpresa",
+    "description": "Uma reação de abalo e espanto para quando o personagem perde a pose diante de uma surpresa.",
+    "tags": [
+      "espanto",
+      "choque",
+      "reação"
+    ],
+    "creator": "Kohl",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/107441483310642",
+    "thumbnail": "/assets/emote-107441483310642.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "120277700669921",
+    "name": "Surprised!",
+    "category": "Surpresa",
+    "description": "Uma opção de surpresa para reagir a notícias inesperadas e momentos de “meu Deus!”.",
+    "tags": [
+      "surpresa",
+      "notícia",
+      "espanto"
+    ],
+    "creator": "Gentle Blox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/120277700669921",
+    "thumbnail": "/assets/emote-120277700669921.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "140204274131647",
+    "name": "Shocked",
+    "category": "Surpresa",
+    "description": "Reação de choque para cenas em que o personagem custa a acreditar no que acabou de ver.",
+    "tags": [
+      "choque",
+      "incredulidade",
+      "reação"
+    ],
+    "creator": "Tar_kus",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/140204274131647",
+    "thumbnail": "/assets/emote-140204274131647.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "98810771901073",
+    "name": "Shocked emote",
+    "category": "Surpresa",
+    "description": "Uma alternativa de reação chocada para variar os takes de espanto. Confira o movimento na prévia.",
+    "tags": [
+      "choque",
+      "espanto",
+      "surpresa"
+    ],
+    "creator": "Wow Clothes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/98810771901073",
+    "thumbnail": "/assets/emote-98810771901073.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "122690738704916",
+    "name": "Shocked [Face Expression]",
+    "category": "Surpresa",
+    "description": "Expressão de choque focada no rosto. Confira a prévia com a cabeça do seu avatar antes de gravar.",
+    "tags": [
+      "rosto",
+      "choque",
+      "expressão"
+    ],
+    "creator": "LinkLogicDevs",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/122690738704916",
+    "thumbnail": "/assets/emote-122690738704916.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "119260671035673",
+    "name": "Shocked Emote",
+    "category": "Surpresa",
+    "description": "Emote proposto como reação de surpresa e atordoamento para entradas e revelações inesperadas.",
+    "tags": [
+      "surpresa",
+      "atordoado",
+      "revelação"
+    ],
+    "creator": "Is_Script",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/119260671035673",
+    "thumbnail": "/assets/emote-119260671035673.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "134307160589135",
+    "name": "Shocked Meme Emote",
+    "category": "Surpresa",
+    "description": "Reação de choque em linguagem de meme para cenas de humor e acontecimentos absurdos.",
+    "tags": [
+      "choque",
+      "meme",
+      "humor"
+    ],
+    "creator": "Neura",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/134307160589135",
+    "thumbnail": "/assets/emote-134307160589135.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "136684049404375",
+    "name": "Gear 5 Luffy Surprised Anime Expression",
+    "category": "Surpresa",
+    "description": "Expressão surpresa inspirada no Luffy Gear 5, com referência à luta contra Kaido em One Piece.",
+    "tags": [
+      "surpresa",
+      "luffy",
+      "anime"
+    ],
+    "creator": "MinecraftHacs123",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/136684049404375",
+    "thumbnail": "/assets/emote-136684049404375.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "129593761197591",
+    "name": "[BEST] Lord have mercy",
+    "category": "Surpresa",
+    "description": "Reação com a proposta de “tenha misericórdia”, adequada a um espanto exagerado em cenas cômicas.",
+    "tags": [
+      "espanto",
+      "drama",
+      "humor"
+    ],
+    "creator": "Coolio_III",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/129593761197591",
+    "thumbnail": "/assets/emote-129593761197591.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "83705071241807",
+    "name": "Soyjak Point",
+    "category": "Surpresa",
+    "description": "Gesto de apontar inspirado no meme Soyjak para chamar a atenção para algo surpreendente na cena.",
+    "tags": [
+      "apontar",
+      "meme",
+      "surpresa"
+    ],
+    "creator": "Inf1n1t_e",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/83705071241807",
+    "thumbnail": "/assets/emote-83705071241807.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "71259962988868",
+    "name": "surprised shy cutesy emote",
+    "category": "Surpresa",
+    "description": "Pose proposta como surpresa tímida para reações delicadas e encontros inesperados.",
+    "tags": [
+      "surpresa",
+      "timidez",
+      "pose"
+    ],
+    "creator": "reminiscing,",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/71259962988868",
+    "thumbnail": "/assets/emote-71259962988868.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "70407212407712",
+    "name": "sad crying timid down",
+    "category": "Muito triste",
+    "description": "Reação de choro tímido para um personagem abatido e retraído.",
+    "tags": [
+      "choro",
+      "timidez",
+      "abatimento",
+      "muito triste"
+    ],
+    "creator": "poobears",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/70407212407712",
+    "thumbnail": "/assets/emote-70407212407712.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92993758955506",
+    "name": "sad crying emote",
+    "category": "Muito triste",
+    "description": "Choro de tristeza profunda para uma decepção ou notícia difícil na cena.",
+    "tags": [
+      "choro",
+      "muito triste",
+      "decepção"
+    ],
+    "creator": "scared'",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92993758955506",
+    "thumbnail": "/assets/emote-92993758955506.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "112210068477261",
+    "name": "Weeping / Cry / Sad Emote",
+    "category": "Muito triste",
+    "description": "Reação de pranto para expressar uma tristeza que já não cabe em palavras.",
+    "tags": [
+      "pranto",
+      "choro",
+      "muito triste"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/112210068477261",
+    "thumbnail": "/assets/emote-112210068477261.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "130445113322385",
+    "name": "Sad depressed crying sit",
+    "category": "Muito triste",
+    "description": "Choro sentado com tema de tristeza profunda para cenas de abatimento.",
+    "tags": [
+      "choro",
+      "sentado",
+      "abatimento",
+      "muito triste"
+    ],
+    "creator": "Ulter Galaxy",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/130445113322385",
+    "thumbnail": "/assets/emote-130445113322385.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "73810550543526",
+    "name": "sad crying",
+    "category": "Muito triste",
+    "description": "Choro com movimento para frente e para trás, útil em uma reação mais prolongada.",
+    "tags": [
+      "choro",
+      "balanço",
+      "muito triste"
+    ],
+    "creator": ".closetedd.",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/73810550543526",
+    "thumbnail": "/assets/emote-73810550543526.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "98206500742922",
+    "name": "Breaking Down / Distress / Sadness / Stressed",
+    "category": "Muito triste",
+    "description": "Reação de desmoronamento emocional para momentos de aflição, tristeza ou estresse no roteiro.",
+    "tags": [
+      "aflição",
+      "estresse",
+      "choro",
+      "muito triste"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/98206500742922",
+    "thumbnail": "/assets/emote-98206500742922.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "135424520994445",
+    "name": "crying",
+    "category": "Muito triste",
+    "description": "Reação de choro para quando a cena pede uma demonstração direta de tristeza intensa.",
+    "tags": [
+      "choro",
+      "muito triste",
+      "reação"
+    ],
+    "creator": "K4RM4 EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/135424520994445",
+    "thumbnail": "/assets/emote-135424520994445.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "125446498913081",
+    "name": "Crying",
+    "category": "Muito triste",
+    "description": "Emote de choro para variar as reações de tristeza nas gravações.",
+    "tags": [
+      "choro",
+      "tristeza intensa",
+      "dramático"
+    ],
+    "creator": "Bundles 4 you",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/125446498913081",
+    "thumbnail": "/assets/emote-125446498913081.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "90425743502387",
+    "name": "Crying",
+    "category": "Muito triste",
+    "description": "Choro escondendo o rosto nas mãos para uma cena de mágoa ou decepção.",
+    "tags": [
+      "choro",
+      "mãos no rosto",
+      "mágoa",
+      "decepção"
+    ],
+    "creator": "Firebrand Games",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/90425743502387",
+    "thumbnail": "/assets/emote-90425743502387.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "73613278415262",
+    "name": "😢 Crying 😭 😭",
+    "category": "Muito triste",
+    "description": "Reação de choro para um momento dramático de perda ou decepção na história.",
+    "tags": [
+      "choro",
+      "dramático",
+      "muito triste"
+    ],
+    "creator": "Parwaz UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/73613278415262",
+    "thumbnail": "/assets/emote-73613278415262.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "82649058816245",
+    "name": "Crying in a Ball 🥺",
+    "category": "Muito triste",
+    "description": "Choro com o corpo recolhido em uma bola, para mostrar fragilidade em uma cena emocional.",
+    "tags": [
+      "choro",
+      "encolhido",
+      "fragilidade",
+      "muito triste"
+    ],
+    "creator": "Kursed Animations",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/82649058816245",
+    "thumbnail": "/assets/emote-82649058816245.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "106604817351766",
+    "name": "Crying",
+    "category": "Muito triste",
+    "description": "Uma opção de choro para cenas de tristeza intensa e pedidos de consolo.",
+    "tags": [
+      "choro",
+      "consolo",
+      "muito triste"
+    ],
+    "creator": "Vcro's Emotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/106604817351766",
+    "thumbnail": "/assets/emote-106604817351766.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4391208058",
+    "name": "Shuffle",
+    "category": "Dança",
+    "description": "Passos de shuffle para uma sequência de dança animada.",
+    "tags": [
+      "shuffle",
+      "dança",
+      "passos",
+      "ritmo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4391208058",
+    "thumbnail": "/assets/emote-4391208058.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 200,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714371274"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4049646104",
+    "name": "Line Dance",
+    "category": "Dança",
+    "description": "Dança em linha para coordenar os movimentos da equipe.",
+    "tags": [
+      "linha",
+      "dança",
+      "equipe",
+      "coreografia"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4049646104",
+    "thumbnail": "/assets/emote-4049646104.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 150,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714383856"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "5915773992",
+    "name": "Break Dance",
+    "category": "Dança",
+    "description": "Dança de break para uma cena de apresentação com atitude.",
+    "tags": [
+      "break",
+      "dança",
+      "apresentação",
+      "atitude"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/5915773992",
+    "thumbnail": "/assets/emote-5915773992.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 100,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714003221"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3934988903",
+    "name": "Fancy Feet",
+    "category": "Dança",
+    "description": "Dança que destaca o trabalho dos pés e o ritmo.",
+    "tags": [
+      "pés",
+      "passos",
+      "dança",
+      "ritmo"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3934988903",
+    "thumbnail": "/assets/emote-3934988903.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 500,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714076981"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4212499637",
+    "name": "Dorky Dance",
+    "category": "Dança",
+    "description": "Dança desajeitada e bem humorada para uma cena de comédia.",
+    "tags": [
+      "dança",
+      "humor",
+      "desajeitado",
+      "comédia"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4212499637",
+    "thumbnail": "/assets/emote-4212499637.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 200,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714069471"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "4272484885",
+    "name": "Baby Dance",
+    "category": "Dança",
+    "description": "Dança brincalhona com tema de bebê para takes de humor.",
+    "tags": [
+      "bebê",
+      "dança",
+      "humor",
+      "brincadeira"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/4272484885",
+    "thumbnail": "/assets/emote-4272484885.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 100,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713983178"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3570535774",
+    "name": "Top Rock",
+    "category": "Dança",
+    "description": "Passos de top rock para uma apresentação de dança urbana.",
+    "tags": [
+      "top rock",
+      "urbano",
+      "dança",
+      "passos"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3570535774",
+    "thumbnail": "/assets/emote-3570535774.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 750,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714336041"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576747102",
+    "name": "Around Town",
+    "category": "Dança",
+    "description": "Dança descontraída para animar encontros e cenas em grupo.",
+    "tags": [
+      "dança",
+      "grupo",
+      "diversão",
+      "encontro"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576747102",
+    "thumbnail": "/assets/emote-3576747102.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 1000,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713981723"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3716636630",
+    "name": "Monkey",
+    "category": "Dança",
+    "description": "Dança com tema de macaco para uma coreografia divertida.",
+    "tags": [
+      "macaco",
+      "dança",
+      "brincadeira",
+      "humor"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3716636630",
+    "thumbnail": "/assets/emote-3716636630.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714388352"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "126204099952447",
+    "name": "Relaxing Floating Lying Down Emote",
+    "category": "Descanso",
+    "description": "Emote anunciado como deitar e flutuar relaxando. Sugestão para pausas com um toque fantástico.",
+    "tags": [
+      "deitar",
+      "flutuar",
+      "relaxar",
+      "pausa"
+    ],
+    "creator": "Araxyss",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/126204099952447",
+    "thumbnail": "/assets/emote-126204099952447.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "124949822720888",
+    "name": "Sleepy Time Emote! 😴💤 (Sleeping)",
+    "category": "Descanso",
+    "description": "Emote de dormir, apresentado pelo criador como hora de dar boa noite.",
+    "tags": [
+      "sono",
+      "dormir",
+      "boa noite",
+      "pausa"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/124949822720888",
+    "thumbnail": "/assets/emote-124949822720888.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "140579392800845",
+    "name": "Sleep - Slumped Over 😴💤",
+    "category": "Descanso",
+    "description": "Sono em postura inclinada, indicado no título; combina com cansaço durante uma espera.",
+    "tags": [
+      "sono",
+      "cansaço",
+      "espera",
+      "dormir"
+    ],
+    "creator": "EMOTES EMOTES EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/140579392800845",
+    "thumbnail": "/assets/emote-140579392800845.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "71545486958204",
+    "name": "☁😴 Cloud 9 Sleeping (Flying) 😴💤",
+    "category": "Descanso",
+    "description": "O criador descreve voar e dormir nas nuvens. Opção para um descanso fantasioso.",
+    "tags": [
+      "nuvens",
+      "sono",
+      "voar",
+      "descanso"
+    ],
+    "creator": "EMOTES EMOTES EMOTES",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/71545486958204",
+    "thumbnail": "/assets/emote-71545486958204.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "87048330987810",
+    "name": "Lay Side Calm Sleeping",
+    "category": "Descanso",
+    "description": "Deita de lado em uma pose de sono calmo, conforme o título; pode compor cenas tranquilas.",
+    "tags": [
+      "deitar",
+      "lado",
+      "sono",
+      "calma"
+    ],
+    "creator": "sunkenteeth",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/87048330987810",
+    "thumbnail": "/assets/emote-87048330987810.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 95,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "91299657366103",
+    "name": "Sleeping Face Down",
+    "category": "Descanso",
+    "description": "Emote de dormir de bruços. O criador recomenda o pacote Woman 3.0 para o melhor resultado.",
+    "tags": [
+      "dormir",
+      "bruços",
+      "cansaço",
+      "woman 3.0"
+    ],
+    "creator": "pawmei",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/91299657366103",
+    "thumbnail": "/assets/emote-91299657366103.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "135071909039014",
+    "name": "Relax",
+    "category": "Descanso",
+    "description": "Opção intitulada Relax para compor um momento de pausa entre as cenas.",
+    "tags": [
+      "relaxar",
+      "pausa",
+      "descanso",
+      "calma"
+    ],
+    "creator": "Ayla Gamers Acessorios",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/135071909039014",
+    "thumbnail": "/assets/emote-135071909039014.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "124799303554236",
+    "name": "Chill Sit😌",
+    "category": "Descanso",
+    "description": "Pose sentada relaxada, confirmada pelo título e pela descrição do criador.",
+    "tags": [
+      "sentar",
+      "relaxar",
+      "pausa",
+      "tranquilo"
+    ],
+    "creator": "Sh4rkie Studio",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/124799303554236",
+    "thumbnail": "/assets/emote-124799303554236.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "79192067640111",
+    "name": "Chill Sit",
+    "category": "Descanso",
+    "description": "Emote anunciado como Chill Sit; sugestão para uma espera sentada e descontraída.",
+    "tags": [
+      "sentar",
+      "espera",
+      "descontraído",
+      "pausa"
+    ],
+    "creator": "Ya Sam Reshy",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/79192067640111",
+    "thumbnail": "/assets/emote-79192067640111.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "115542676494125",
+    "name": "Chill Sit Emote",
+    "category": "Descanso",
+    "description": "Emote de sentar relaxado anunciado no título, para intervalos e conversas da equipe.",
+    "tags": [
+      "sentar",
+      "relaxar",
+      "conversa",
+      "intervalo"
+    ],
+    "creator": "Araxyss",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/115542676494125",
+    "thumbnail": "/assets/emote-115542676494125.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "77334190986749",
+    "name": "✨Chill sit",
+    "category": "Descanso",
+    "description": "Senta e bate as mãos nos joelhos, segundo a descrição oficial, para uma pausa casual.",
+    "tags": [
+      "sentar",
+      "joelhos",
+      "casual",
+      "pausa"
+    ],
+    "creator": "Gatin Store",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/77334190986749",
+    "thumbnail": "/assets/emote-77334190986749.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "107330902486930",
+    "name": "Chill Sit",
+    "category": "Descanso",
+    "description": "Senta e olha ao redor, conforme o criador; opção para esperar alguém chegar à cena.",
+    "tags": [
+      "sentar",
+      "olhar",
+      "esperar",
+      "descanso"
+    ],
+    "creator": "lISlenderIl",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/107330902486930",
+    "thumbnail": "/assets/emote-107330902486930.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "129848542941828",
+    "name": "Meditation",
+    "category": "Descanso",
+    "description": "Emote de meditação apresentado como busca de paz interior, para cenas de tranquilidade.",
+    "tags": [
+      "meditação",
+      "paz",
+      "calma",
+      "descanso"
+    ],
+    "creator": "Keyframe Marketplace",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/129848542941828",
+    "thumbnail": "/assets/emote-129848542941828.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "134169789766029",
+    "name": "Meditation",
+    "category": "Descanso",
+    "description": "Meditação de cabeça para baixo, conforme a descrição oficial, para uma pausa incomum.",
+    "tags": [
+      "meditação",
+      "invertido",
+      "calma",
+      "pausa"
+    ],
+    "creator": "gnmex09",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/134169789766029",
+    "thumbnail": "/assets/emote-134169789766029.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "77599961289214",
+    "name": "Scared Cowering Shivering",
+    "category": "Medo",
+    "description": "Corpo retraído e tremor para representar um personagem assustado.",
+    "tags": [
+      "medo",
+      "tremer",
+      "encolher"
+    ],
+    "creator": "Super Emotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/77599961289214",
+    "thumbnail": "/assets/emote-77599961289214.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "93899507516853",
+    "name": "Scared / Fearful / Cold - Shivering / Quivering",
+    "category": "Medo",
+    "description": "Tremor que pode comunicar medo ou frio, sugerido pelo criador para cenas de susto.",
+    "tags": [
+      "medo",
+      "frio",
+      "tremor"
+    ],
+    "creator": "ㆆ",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/93899507516853",
+    "thumbnail": "/assets/emote-93899507516853.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "73250315597804",
+    "name": "Scared Fetal",
+    "category": "Medo",
+    "description": "Posição fetal para um personagem que tenta se proteger do que está acontecendo.",
+    "tags": [
+      "medo",
+      "posição fetal",
+      "proteção"
+    ],
+    "creator": "Kotan Studios",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/73250315597804",
+    "thumbnail": "/assets/emote-73250315597804.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "140001870255177",
+    "name": "scared idle pose",
+    "category": "Medo",
+    "description": "Postura de espera assustada para manter a tensão enquanto outro personagem age.",
+    "tags": [
+      "medo",
+      "espera",
+      "tensão"
+    ],
+    "creator": "littl'",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/140001870255177",
+    "thumbnail": "/assets/emote-140001870255177.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "82414695808858",
+    "name": "Scared",
+    "category": "Medo",
+    "description": "Corpo encolhido com gesto de não, uma reação de receio descrita pelo criador.",
+    "tags": [
+      "medo",
+      "encolher",
+      "receio"
+    ],
+    "creator": "EarlLemnGrab",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/82414695808858",
+    "thumbnail": "/assets/emote-82414695808858.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": true,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "71592236601718",
+    "name": "Scared Sit",
+    "category": "Medo",
+    "description": "Pose sentada de medo para uma pausa de tensão durante a gravação.",
+    "tags": [
+      "medo",
+      "sentado",
+      "tensão"
+    ],
+    "creator": "Optic Enhancements",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/71592236601718",
+    "thumbnail": "/assets/emote-71592236601718.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "136715095826984",
+    "name": "Scared Sit",
+    "category": "Medo",
+    "description": "Postura sentada de susto, proposta no catálogo para situações de horror.",
+    "tags": [
+      "medo",
+      "sentado",
+      "horror"
+    ],
+    "creator": "Tilted Tree Studios",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/136715095826984",
+    "thumbnail": "/assets/emote-136715095826984.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "97802600675728",
+    "name": "Rolling Nervous & Scared",
+    "category": "Medo",
+    "description": "Movimento de rolar associado a nervosismo e medo, útil para exagerar uma reação.",
+    "tags": [
+      "medo",
+      "nervosismo",
+      "rolar"
+    ],
+    "creator": "luxx stuff",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/97802600675728",
+    "thumbnail": "/assets/emote-97802600675728.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "95202420127081",
+    "name": "Stressed / Scared Sit",
+    "category": "Medo",
+    "description": "Pose sentada que combina estresse e medo em uma reação mais contida.",
+    "tags": [
+      "medo",
+      "estresse",
+      "sentado"
+    ],
+    "creator": "Turkizite’s Creations",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/95202420127081",
+    "thumbnail": "/assets/emote-95202420127081.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "70462015956773",
+    "name": "Scared",
+    "category": "Medo",
+    "description": "Corpo recolhido numa bola, sugerido para um personagem com medo de se mexer.",
+    "tags": [
+      "medo",
+      "encolher",
+      "paralisado"
+    ],
+    "creator": "Billy's UGC Premium",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/70462015956773",
+    "thumbnail": "/assets/emote-70462015956773.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "100560542426315",
+    "name": "Terrified Scared Shaking Sit / Sitting",
+    "category": "Medo",
+    "description": "Tremor sentado de terror para reagir a monstros ou uma presença assustadora.",
+    "tags": [
+      "medo",
+      "terror",
+      "tremor"
+    ],
+    "creator": "AlexAstral Studios",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/100560542426315",
+    "thumbnail": "/assets/emote-100560542426315.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "111637404427248",
+    "name": "Panic Insane Shivering Idle Pose",
+    "category": "Medo",
+    "description": "Espera com tremor de pânico para sustentar o nervosismo entre as falas.",
+    "tags": [
+      "medo",
+      "pânico",
+      "tremor"
+    ],
+    "creator": "nameswapped3",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/111637404427248",
+    "thumbnail": "/assets/emote-111637404427248.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "131445958780041",
+    "name": "[ Scared Cold Nervous ] Shiver",
+    "category": "Medo",
+    "description": "Tremor que o criador sugere para medo, frio ou nervosismo, conforme a cena.",
+    "tags": [
+      "medo",
+      "nervosismo",
+      "tremor"
+    ],
+    "creator": "Quirky Quarters",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/131445958780041",
+    "thumbnail": "/assets/emote-131445958780041.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 80,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "103049334923868",
+    "name": "panic rocking back and forth",
+    "category": "Medo",
+    "description": "Balanço para frente e para trás para transmitir pânico e insegurança.",
+    "tags": [
+      "medo",
+      "pânico",
+      "balançar"
+    ],
+    "creator": "Hype Motion",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/103049334923868",
+    "thumbnail": "/assets/emote-103049334923868.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3994130516",
+    "name": "Bodybuilder",
+    "category": "Confiança",
+    "description": "Pose de fisiculturista para demonstrar força e autoconfiança.",
+    "tags": [
+      "força",
+      "músculos",
+      "pose",
+      "confiança"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3994130516",
+    "thumbnail": "/assets/emote-3994130516.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 200,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10713990381"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "3576745472",
+    "name": "Fashionable",
+    "category": "Confiança",
+    "description": "Poses de moda para mostrar o visual com atitude diante da câmera.",
+    "tags": [
+      "moda",
+      "câmera",
+      "pose",
+      "atitude"
+    ],
+    "creator": "Roblox",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/3576745472",
+    "thumbnail": "/assets/emote-3576745472.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 750,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": true,
+      "payloadAccess": "verified",
+      "animationIds": [
+        "10714091938"
+      ],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "116711882754785",
+    "name": "Show That Fit",
+    "category": "Confiança",
+    "description": "Pose orgulhosa para mostrar o look e entrar em cena com confiança.",
+    "tags": [
+      "look",
+      "moda",
+      "orgulho",
+      "confiança"
+    ],
+    "creator": "Frenky's Emotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/116711882754785",
+    "thumbnail": "/assets/emote-116711882754785.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "75482297161934",
+    "name": "Confident Pose ♡",
+    "category": "Confiança",
+    "description": "Pose confiante para apresentações e retratos do avatar.",
+    "tags": [
+      "pose",
+      "confiança",
+      "apresentação",
+      "retrato"
+    ],
+    "creator": "Flyra",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/75482297161934",
+    "thumbnail": "/assets/emote-75482297161934.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "135123150497783",
+    "name": "Confident Girl Pose",
+    "category": "Confiança",
+    "description": "Pose feminina confiante para mostrar atitude em cena.",
+    "tags": [
+      "pose",
+      "atitude",
+      "confiança",
+      "avatar"
+    ],
+    "creator": "Cloud Coalition",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/135123150497783",
+    "thumbnail": "/assets/emote-135123150497783.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "92978954233090",
+    "name": "🎀 Doll-Like Confidence Idle Pose",
+    "category": "Confiança",
+    "description": "Pose delicada de boneca com atitude confiante para mostrar o visual.",
+    "tags": [
+      "boneca",
+      "pose",
+      "moda",
+      "confiança"
+    ],
+    "creator": "Kursed Creations",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/92978954233090",
+    "thumbnail": "/assets/emote-92978954233090.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "105624744022482",
+    "name": "Confident Step Pose",
+    "category": "Confiança",
+    "description": "Pose com postura de passarela para apresentar o avatar com segurança.",
+    "tags": [
+      "passarela",
+      "pose",
+      "moda",
+      "confiança"
+    ],
+    "creator": "Lucid’s Emotes",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/105624744022482",
+    "thumbnail": "/assets/emote-105624744022482.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "122389262342400",
+    "name": "Confident Baddie Profile Pose",
+    "category": "Confiança",
+    "description": "Pose de perfil com atitude para uma apresentação segura e marcante.",
+    "tags": [
+      "perfil",
+      "pose",
+      "atitude",
+      "confiança"
+    ],
+    "creator": "Ozen's UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/122389262342400",
+    "thumbnail": "/assets/emote-122389262342400.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "120913764038894",
+    "name": "Show Off Pose",
+    "category": "Confiança",
+    "description": "Pose para se exibir com autoconfiança diante da câmera.",
+    "tags": [
+      "pose",
+      "exibir",
+      "câmera",
+      "confiança"
+    ],
+    "creator": "xsixx",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/120913764038894",
+    "thumbnail": "/assets/emote-120913764038894.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "101228262651232",
+    "name": "Sassy Model Pose",
+    "category": "Confiança",
+    "description": "Pose de modelo com atitude ousada para mostrar o look.",
+    "tags": [
+      "modelo",
+      "moda",
+      "pose",
+      "atitude"
+    ],
+    "creator": "Animate+",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/101228262651232",
+    "thumbnail": "/assets/emote-101228262651232.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "74973192307703",
+    "name": "Cute confident pose standing hands on side",
+    "category": "Confiança",
+    "description": "Pose em pé com as mãos ao lado para uma apresentação confiante.",
+    "tags": [
+      "em pé",
+      "mãos",
+      "pose",
+      "confiança"
+    ],
+    "creator": "bunniva",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/74973192307703",
+    "thumbnail": "/assets/emote-74973192307703.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "84190746664272",
+    "name": "💪 Flex your Muscles",
+    "category": "Confiança",
+    "description": "Pose de fisiculturismo para flexionar os músculos e mostrar força.",
+    "tags": [
+      "músculos",
+      "força",
+      "pose",
+      "confiança"
+    ],
+    "creator": "Motion Craft UGC",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/84190746664272",
+    "thumbnail": "/assets/emote-84190746664272.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  },
+  {
+    "id": "105626567136590",
+    "name": "Tricep Flex",
+    "category": "Confiança",
+    "description": "Flexão dos tríceps em uma pose focada para demonstrar força e confiança.",
+    "tags": [
+      "tríceps",
+      "músculos",
+      "força",
+      "confiança"
+    ],
+    "creator": "L&M Cosmetics",
+    "verified": true,
+    "source": "https://www.roblox.com/catalog/105626567136590",
+    "thumbnail": "/assets/emote-105626567136590.png",
+    "addedBy": null,
+    "createdAt": "2026-11-17T00:14:04.372970+00:00",
+    "verifiedAt": "2026-11-17",
+    "testedInGame": false,
+    "validation": {
+      "checkedAt": "2026-11-17T00:14:04.372970+00:00",
+      "assetType": 61,
+      "thumbnailState": "Completed",
+      "isPurchasable": null,
+      "listedPrice": 55,
+      "saleLocationType": "ShopAndAllExperiences",
+      "payloadAuditPassed": false,
+      "payloadAccess": "authentication-required",
+      "animationIds": [],
+      "testedInGame": false
+    }
+  }
+]

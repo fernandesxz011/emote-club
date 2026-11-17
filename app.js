@@ -1,0 +1,400 @@
+import {getRecency, formatAddedDate} from './library.js';
+import {createSessionStore} from './session-store.js';
+'use strict';
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const normalize = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const configuredApi=window.EMOTECLUB_CONFIG?.apiBaseUrl||window.location.origin;
+const apiOrigin=new URL(configuredApi).origin;
+function browserStorage(name) {try {return window[name];} catch {return null;}}
+const sessionStore=createSessionStore({persistent:browserStorage('localStorage'),temporary:browserStorage('sessionStorage'),key:'emoteclub.session.v1:'+apiOrigin});
+let authSession=sessionStore.read();
+let authEpoch=0;
+let authMode='login';
+let authBusy=false;
+const categories = [
+ {name:'Feliz',emoji:'☺',color:'#c4c177',bg:'#f0efdb',ink:'#8d8841'},
+ {name:'Muito feliz',emoji:'✦',color:'#cfb765',bg:'#f5edcf',ink:'#9d8036'},
+ {name:'Triste',emoji:'☂',color:'#8aa7cf',bg:'#e7edf6',ink:'#738baa'},
+ {name:'Muito triste',emoji:'☁',color:'#8b92bf',bg:'#e8e8f1',ink:'#7a7b9b'},
+ {name:'Confirmação',emoji:'✓',color:'#a2b78b',bg:'#e7eddf',ink:'#7d8d63'},
+ {name:'Negação',emoji:'×',color:'#cda18e',bg:'#f2e6e1',ink:'#ab8778'},
+ {name:'Raiva',emoji:'ϟ',color:'#c78c8b',bg:'#f4e2e1',ink:'#b47b79'},
+ {name:'Surpresa',emoji:'✧',color:'#b79ac6',bg:'#efe5f3',ink:'#9e80ad'},
+ {name:'Dança',emoji:'♫',color:'#a694cb',bg:'#ede7f6',ink:'#8e76b3'},
+ {name:'Cumprimentos',emoji:'✌',color:'#d0ac80',bg:'#f3e9db',ink:'#aa8b65'},
+ {name:'Descanso',emoji:'☾',color:'#93b3ad',bg:'#e3eeeb',ink:'#74918b'},
+ {name:'Medo',emoji:'!',color:'#a9a69f',bg:'#ebe9e4',ink:'#8b867e'},
+ {name:'Confiança',emoji:'↗',color:'#9eabc3',bg:'#e8ecf5',ink:'#7b88a2'}
+];
+const categoryOf = name => categories.find(c => c.name === name) || categories[0];
+const keywordIdeas = {
+ 'Feliz':['alegria','sorriso','boa notícia'], 'Muito feliz':['comemoração','vitória','euforia'],
+ 'Triste':['tristeza','decepção','desânimo'], 'Muito triste':['choro','sofrimento','drama'],
+ 'Confirmação':['sim','concordar','aprovação'], 'Negação':['não','recusar','discordar'],
+ 'Raiva':['irritação','bravo','frustração'], 'Surpresa':['espanto','choque','revelação'],
+ 'Dança':['festa','ritmo','coreografia'], 'Cumprimentos':['olá','despedida','saudação'],
+ 'Descanso':['relaxar','pausa','cansaço'], 'Medo':['susto','pânico','receio'],
+ 'Confiança':['atitude','orgulho','pose']
+};
+let savedFavorites;
+try { savedFavorites = JSON.parse(localStorage.getItem('emoteclub-favorites') || '[]'); } catch { savedFavorites = []; }
+const state = {items:[],view:'all',category:'all',query:'',sort:'curated',favorites:new Set(),legacyFavorites:new Set(Array.isArray(savedFavorites) ? savedFavorites.map(String) : []),pendingSaves:new Set(),personalReady:false,personalStorage:'loading',storage:'loading',user:null,detailId:null};
+let toastTimer;
+let profileNameDirty=false;
+function toast(message) { const el = $('#toast'); $('span', el).textContent = message; el.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => {el.hidden = true;}, 3600); }
+function safeImage(url) {
+ if(typeof url==='string'&&/^\/?(?:\.\/)?assets\/[a-zA-Z0-9-]+\.png$/.test(url))return './'+url.replace(/^\.?\//,'');
+ if(typeof url==='string'&&/^https:\/\/[^/]+\.rbxcdn\.com\//.test(url))return url;
+ return './assets/emote-4849499887.png';
+}
+function cardStyles(c) { return `--card-bg:${c.bg};--tag-bg:${c.bg};--tag-ink:${c.ink}`; }
+function catalogLink(item) { return `https://www.roblox.com/catalog/${encodeURIComponent(item.id)}`; }
+function openDialog(dialog) { if (!dialog.open) dialog.showModal(); }
+function closeDialog(dialog) { dialog.close(); }
+function counts(category) { return state.items.filter(item => item.category === category).length; }
+function renderNavigation() {
+ $('#nav-count').textContent = state.items.length;
+ $('#fav-count').textContent = state.items.filter(item => state.favorites.has(item.id)).length;
+ $('#recent-count').textContent = state.items.filter(item=>getRecency(item)).length;
+ $('#hero-count').textContent = `${state.items.length} emotes`;
+ $('#sidebar-categories').innerHTML = categories.map(c => `<button class="category-item ${state.category===c.name?'active':''}" data-category="${c.name}" style="--cat-color:${c.color}" aria-pressed="${state.category===c.name}"><span class="cat-dot"></span>${c.name}<span class="cat-count">${counts(c.name)}</span></button>`).join('');
+ $('#category-filters').innerHTML = `<button class="filter-pill ${state.category==='all'?'active':''}" data-category="all" aria-pressed="${state.category==='all'}">Todos os emotes <span class="pill-count">${state.items.length}</span></button>` + categories.map(c => `<button class="filter-pill ${state.category===c.name?'active':''}" data-category="${c.name}" aria-pressed="${state.category===c.name}"><span class="emoji">${c.emoji}</span>${c.name}</button>`).join('');
+ $$('.nav-item').forEach(el => el.classList.toggle('active', el.dataset.view===state.view));
+}
+function filteredItems() {
+ const query = normalize(state.query).trim();
+ const items = state.items.filter(item => (state.category==='all'||item.category===state.category) && (state.view!=='favorites'||state.favorites.has(item.id)) && (state.view!=='added'||item.addedBy) && (state.view!=='recent'||getRecency(item)) && (!query||normalize([item.name,item.category,item.description,item.id,...item.tags].join(' ')).includes(query)));
+ if (state.sort==='name') items.sort((a,b)=>a.name.localeCompare(b.name,'pt-BR'));
+ if (state.sort==='recent'||state.view==='recent') items.sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+ return items;
+}
+function renderCard(item,index) {
+ const c = categoryOf(item.category), favorite = state.favorites.has(item.id), recency=getRecency(item), pending=state.pendingSaves.has(item.id);
+ const badge=recency?`<span class="recency-badge ${recency.kind}" title="Adicionado ao acervo: ${escapeHTML(formatAddedDate(item))}">${recency.kind==='new'?'✦':'◷'} ${recency.label}</span>`:'';
+ return `<article class="emote-card ${favorite?'is-saved':''}" style="${cardStyles(c)}"><div class="card-image"><span class="card-index">EC / ${String(index+1).padStart(2,'0')}</span>${badge}<button class="favorite-button ${favorite?'is-favorite':''}" data-favorite="${item.id}" aria-label="${favorite?'Remover dos salvos':'Salvar'} ${escapeHTML(item.name)}" aria-pressed="${favorite}" ${pending||!state.personalReady?'disabled':''}>${icon(favorite?'check':'heart')}</button><button class="detail-trigger" data-detail="${item.id}" aria-label="Ver detalhes de ${escapeHTML(item.name)}"><img src="${escapeHTML(safeImage(item.thumbnail))}" alt="Miniatura do emote ${escapeHTML(item.name)}" loading="lazy" width="420" height="420"></button><span class="image-caption">MAKE A SCENE.</span></div><div class="card-body"><span class="card-category">${c.emoji} ${escapeHTML(item.category)}</span><button class="card-name" data-detail="${item.id}" title="${escapeHTML(item.name)}">${escapeHTML(item.name)}</button><p class="card-description">${escapeHTML(item.description)}</p><div class="card-footer"><span class="verified-label" title="ID e tipo Emote conferidos no catálogo oficial. Não testado em jogo.">${icon('check')}Catálogo conferido</span><button class="copy-button" data-copy="${item.id}" aria-label="Copiar ID de ${escapeHTML(item.name)}">${icon('copy')}Copiar ID</button></div><button class="save-status-button ${favorite?'saved':''}" data-favorite="${item.id}" aria-pressed="${favorite}" ${pending||!state.personalReady?'disabled':''}>${icon(favorite?'check':'plus')}${pending?'Salvando…':!state.personalReady?'Carregando salvos…':favorite?'Salvo por você':'Salvar emote'}${favorite?'<span>Remover</span>':''}</button></div></article>`;
+}
+function render() {
+ renderNavigation();
+ renderAccount();
+ renderPersonalNotice();
+ const items=filteredItems();
+ $('#results-count').textContent = `${items.length} ${items.length===1?'emote encontrado':'emotes encontrados'}`;
+ $('#emote-grid').innerHTML=items.map(renderCard).join('');
+ $('#empty-state').hidden=items.length>0;
+ const noFilter=state.category==='all'&&!state.query;
+ $('#clear-filters').hidden=noFilter;
+ $('#empty-description').textContent=state.view==='favorites'&&noFilter?'Clique em “Salvar emote” para montar sua coleção pessoal. Os salvos ficam na sua conta.':state.view==='recent'&&noFilter?'Os próximos achados aparecem aqui. Esta aba reúne emotes adicionados nos últimos 7 dias.':state.view==='added'&&noFilter?'O próximo achado pode ser seu. Adicione um novo emote para compartilhar com a equipe.':'Experimente outra palavra ou explore uma nova emoção.';
+ $('#catalog-title').innerHTML=state.view==='favorites'?'Meus emotes salvos<span class="heading-dot">.</span>':state.view==='recent'?'Acabaram de chegar<span class="heading-dot">.</span>':state.view==='added'?'Descobertas da equipe<span class="heading-dot">.</span>':'Encontre sua próxima reação<span class="heading-dot">.</span>';
+ $('#breadcrumb-view').textContent={all:'Explorar emotes',favorites:'Meus emotes salvos',recent:'Novidades',added:'Adicionados pela equipe'}[state.view];
+ $('#hero').hidden=state.view!=='all';
+}
+function setCategory(category) {state.category=category;state.view='all';render();$('#sidebar').classList.remove('mobile-open');}
+function setView(view) {state.view=view;state.category='all';state.query='';$('#search').value='';render();$('#sidebar').classList.remove('mobile-open');}
+function reset() {setView('all');}
+async function favorite(id) {
+ if (!state.personalReady || state.pendingSaves.has(id)) return;
+ if (!state.user?.signedIn || !state.user?.profile) {openProfile();return;}
+ if (state.personalStorage!=='shared') {toast('Não foi possível sincronizar seus salvos. Abra Meu cadastro para tentar novamente.');return;}
+ const epoch=authEpoch;const save=!state.favorites.has(id);
+ state.pendingSaves.add(id);render();refreshDetail();
+ try {
+  const result=await requestJSON('/api/saved',{method:'POST',body:JSON.stringify({id,saved:save})});
+  if(epoch!==authEpoch)return;
+  if(result.saved) state.favorites.add(id); else state.favorites.delete(id);
+  toast(result.saved?'Salvo na sua conta. Essa reação já é sua!':'Emote removido da sua coleção.');
+ } catch(error) {if(epoch!==authEpoch)return;toast(error.name==='TimeoutError'?'A sincronização demorou. Atualize a página para conferir antes de tentar novamente.':error.message);}
+ finally {if(epoch===authEpoch){state.pendingSaves.delete(id);render();refreshDetail();}}
+}
+function refreshDetail() {if(state.detailId && $('#detail-dialog').open) showDetail(state.detailId,false);}
+async function copyId(id) {
+ try { await navigator.clipboard.writeText(id); toast('ID do catálogo copiado. Bora gravar!'); }
+ catch { const field=document.createElement('textarea');field.value=id;field.style.position='fixed';field.style.opacity='0';document.body.append(field);field.select();const copied=document.execCommand('copy');field.remove();toast(copied?'ID do catálogo copiado.':`ID do catálogo: ${id}`); }
+}
+function showDetail(id,open=true) {
+ const item=state.items.find(i=>i.id===id); if(!item)return;
+ state.detailId=id;const c=categoryOf(item.category),fav=state.favorites.has(id),recency=getRecency(item),pending=state.pendingSaves.has(id);
+ $('#detail-content').innerHTML=`<div class="detail-layout" style="${cardStyles(c)}"><div class="detail-image"><img src="${escapeHTML(safeImage(item.thumbnail))}" alt="Emote ${escapeHTML(item.name)}"></div><section class="detail-info"><span class="card-category">${c.emoji} ${escapeHTML(item.category)}</span>${recency?`<span class="detail-recency ${recency.kind}">${recency.label} no acervo</span>`:''}<h2>${escapeHTML(item.name)}</h2><p class="added-date">Adicionado ao acervo: ${escapeHTML(formatAddedDate(item))}</p><p class="detail-creator">Por ${escapeHTML(item.creator)}${item.addedBy?` · adicionado por ${escapeHTML(item.addedBy)}`:''}</p><p>${escapeHTML(item.description)}</p><div class="detail-tags">${item.tags.map(tag=>`<span>#${escapeHTML(tag)}</span>`).join('')}</div><div class="emote-reference"><div class="id-block"><div><small>ID DO CATÁLOGO</small><code>${escapeHTML(id)}</code></div><button class="icon-button" data-copy="${id}" aria-label="Copiar ID">${icon('copy')}</button></div><div class="catalog-link-block"><small>LINK DO EMOTE</small><a href="${catalogLink(item)}" target="_blank" rel="noopener noreferrer">${escapeHTML(catalogLink(item))}</a></div></div><div class="detail-buttons"><a class="button primary" href="${catalogLink(item)}" target="_blank" rel="noopener noreferrer">Ver emote no Roblox ${icon('external')}</a><button class="button ${fav?'secondary':'ghost'}" data-favorite="${id}" aria-pressed="${fav}" ${pending||!state.personalReady?'disabled':''}>${icon(fav?'check':'plus')}${pending?'Salvando…':fav?'Salvo por você · remover':'Salvar na minha coleção'}</button></div><p class="detail-disclaimer">✓ ID e tipo Emote conferidos no catálogo${item.verifiedAt?` em ${escapeHTML(item.verifiedAt.split('-').reverse().join('/'))}`:''}. Prévia animada, preço e disponibilidade na página oficial. Teste na sua experiência antes de gravar.</p>${verificationInfo(item)}</section></div>`;
+ if(open) openDialog($('#detail-dialog'));
+}
+function openAdd() {
+ if(!state.user?.signedIn){openProfile();return;}
+ setAddTab('emote');
+ refreshKeywordSuggestions();
+ $('#sidebar').classList.remove('mobile-open');
+ const error=$('#form-error');error.hidden=true;
+ if(state.storage!=='shared') {error.textContent='O cadastro compartilhado está temporariamente indisponível. Você pode explorar os emotes enquanto isso.';error.hidden=false;}
+ $('#save-emote').disabled=state.storage!=='shared';
+ openDialog($('#add-dialog'));
+}
+async function requestJSON(path,options={}) {
+ const headers={...(options.body?{'Content-Type':'application/json'}:{}),...options.headers};
+ if(authSession?.token)headers.Authorization=`Bearer ${authSession.token}`;
+ const response=await fetch(new URL(path,apiOrigin),{...options,headers,credentials:'omit',signal:AbortSignal.timeout(30000)});
+ let data;try {data=await response.json();} catch {throw new Error('Não foi possível conectar ao servidor do Emote Club. Tente novamente.');}
+ if(!response.ok) {const error=new Error(data.error||'Algo deu errado. Tente novamente.');error.status=response.status;error.code=data.code;throw error;}
+ return data;
+}
+function formError(message,status) {
+ const el=$('#form-error');el.textContent=message;
+ if(status===401){const button=document.createElement('button');button.type='button';button.className='text-button';button.dataset.profile='';button.textContent=' Entrar na minha conta ↗';el.append(button);}
+ el.hidden=false;
+}
+async function validateEmote() {
+ const button=$('#validate-emote');const input=$('#emote-id');
+ if(!input.value.trim()) {input.reportValidity();return;}
+ button.disabled=true;button.textContent='Conferindo…';$('#form-error').hidden=true;$('#validation-result').hidden=true;
+ try {const {item}=await requestJSON('/api/validate',{method:'POST',body:JSON.stringify({id:input.value.trim()})});$('#emote-name').value=item.name;const result=$('#validation-result');result.textContent=`✓ ${item.name} · Por ${item.creator}. ID e tipo Emote conferidos no Roblox.`;result.hidden=false;}
+ catch(error){formError(error.name==='TimeoutError'?'O Roblox demorou a responder. Tente conferir novamente.':error.message,error.status);}
+ finally {button.disabled=false;button.textContent='Conferir';}
+}
+async function saveEmote(event) {
+ event.preventDefault();const form=event.currentTarget;
+ if(!validateAddForm(form))return;
+ const submit=$('#save-emote');submit.disabled=true;submit.innerHTML='Salvando…';$('#form-error').hidden=true;
+ const fields=new FormData(form),payload={id:fields.get('id').trim(),name:fields.get('name').trim(),category:fields.get('category'),description:fields.get('description').trim(),tags:parseAddKeywords()};
+ try {const {item}=await requestJSON('/api/emotes',{method:'POST',body:JSON.stringify(payload)});state.items.push(item);closeDialog($('#add-dialog'));form.reset();$('#emote-tags').setCustomValidity('');refreshKeywordSuggestions();setAddTab('emote');$('#validation-result').hidden=true;setView('added');toast('Nova reação no acervo. A equipe agradece!');}
+ catch(error){formError(error.name==='TimeoutError'?'A resposta demorou mais que o esperado. Busque pelo ID antes de tentar salvar novamente.':error.message,error.status);}
+ finally {submit.disabled=false;submit.innerHTML=`${icon('plus')}Adicionar ao acervo`;}
+}
+document.addEventListener('click',event=>{
+ const addTab=event.target.closest('[data-add-tab]');if(addTab){setAddTab(addTab.dataset.addTab,true);return;}
+ const keyword=event.target.closest('[data-keyword]');if(keyword){toggleKeyword(keyword.dataset.keyword);return;}
+ if(event.target.closest('[data-profile]')){openProfile();return;}
+ const mode=event.target.closest('[data-auth-mode]');if(mode){setAuthMode(mode.dataset.authMode);return;}
+ const category=event.target.closest('[data-category]');if(category){setCategory(category.dataset.category);return;}
+ const view=event.target.closest('[data-view]');if(view){setView(view.dataset.view);return;}
+ const fav=event.target.closest('[data-favorite]');if(fav){favorite(fav.dataset.favorite);return;}
+ const copy=event.target.closest('[data-copy]');if(copy){copyId(copy.dataset.copy);return;}
+ const detail=event.target.closest('[data-detail]');if(detail){showDetail(detail.dataset.detail);return;}
+ if(event.target.closest('[data-add]')){openAdd();return;}
+ const close=event.target.closest('[data-close]');if(close){closeDialog(close.closest('dialog'));return;}
+ if(!event.target.closest('.sidebar')&&!event.target.closest('#mobile-menu')) $('#sidebar').classList.remove('mobile-open');
+});
+$$('dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}}));
+$('#search').addEventListener('input',event=>{state.query=event.target.value;render();});
+$('#sort').addEventListener('change',event=>{state.sort=event.target.value;render();});
+$('#clear-filters').addEventListener('click',()=>{state.category='all';state.query='';$('#search').value='';render();});
+$('#empty-reset').addEventListener('click',reset);
+$('#surprise').addEventListener('click',()=>{const items=filteredItems();if(!items.length){toast('Explore todos os emotes para encontrar uma surpresa.');return;}showDetail(items[Math.floor(Math.random()*items.length)].id);});
+$('#open-guide').addEventListener('click',()=>openDialog($('#guide-dialog')));
+$('#catalog-about').addEventListener('click',()=>openDialog($('#guide-dialog')));
+$('#mobile-menu').addEventListener('click',()=>$('#sidebar').classList.toggle('mobile-open'));
+$('#grid-view').addEventListener('click',()=>setLayout(false));$('#list-view').addEventListener('click',()=>setLayout(true));
+function setLayout(list) {$('#emote-grid').classList.toggle('list-mode',list);$('#grid-view').classList.toggle('active',!list);$('#list-view').classList.toggle('active',list);$('#grid-view').setAttribute('aria-pressed',String(!list));$('#list-view').setAttribute('aria-pressed',String(list));}
+$('#emote-category').innerHTML='<option value="" disabled selected>Selecione uma emoção</option>'+categories.map(c=>`<option value="${c.name}">${c.name}</option>`).join('');
+$('#emote-category').addEventListener('change',refreshKeywordSuggestions);
+$('#emote-tags').addEventListener('input',()=>{validateKeywordInput();refreshKeywordSuggestions();});
+$('#add-next').addEventListener('click',()=>{if(validateAddForm($('#add-form'),'panel-emote'))setAddTab('classification',true);});
+$('#add-back').addEventListener('click',()=>setAddTab('emote',true));
+$('.add-tabs').addEventListener('keydown',event=>{
+ if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||event.target.getAttribute('role')!=='tab')return;
+ event.preventDefault();
+ const current=event.target.dataset.addTab;const next=event.key==='Home'?'emote':event.key==='End'?'classification':current==='emote'?'classification':'emote';
+ setAddTab(next,true);
+});
+$('#validate-emote').addEventListener('click',validateEmote);
+$('#add-form').addEventListener('submit',saveEmote);
+$('#emote-id').addEventListener('input',()=>{$('#validation-result').hidden=true;});
+document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$$('dialog').some(d=>d.open)){event.preventDefault();$('#search').focus();}});
+async function load() {
+ try {const data=await requestJSON('/api/emotes');state.items=data.items;state.storage=data.storage;if(data.warning){$('#catalog-status').textContent=data.warning;$('#catalog-status').hidden=false;}}
+ catch {try {state.items=await (await fetch('./seed.json')).json();state.storage='unavailable';$('#catalog-status').textContent='Exibindo o acervo inicial. Não foi possível conectar aos cadastros da equipe. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;}catch{$('#catalog-status').textContent='Não foi possível carregar a biblioteca. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;state.items=[];}}
+ render();
+}
+load();
+loadPersonal();
+
+function renderAccount() {
+ const name=state.user?.profile?.displayName;
+ $('#account-label').textContent=name||'Entrar';
+ $('#sidebar-account-label').textContent=name?`Olá, ${name}`:'Entrar ou criar conta';
+ $('#user-avatar').textContent=name?name.split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase():'EC';
+ $('#open-profile').title=name?`Meu cadastro: ${name}`:'Entrar ou criar minha conta';
+ if($('#profile-dialog').open) renderProfile();
+}
+function renderPersonalNotice() {
+ const notice=$('#personal-notice');
+ notice.hidden=!['favorites','recent'].includes(state.view);
+ if(notice.hidden)return;
+ const title=$('#personal-notice-title'),text=$('#personal-notice-text'),action=$('#personal-notice-action');
+ action.hidden=state.view==='recent';
+ if(state.view==='recent') {title.textContent='Novidades dos últimos 7 dias';text.textContent='Novo: primeiras 48 horas no acervo. Recente: de 48 horas até 7 dias. A data de inclusão aparece nos detalhes.';return;}
+ if(!state.personalReady) {title.textContent='Carregando sua coleção…';text.textContent='Estamos buscando os emotes salvos na sua conta.';action.hidden=true;}
+ else if(state.personalStorage!=='shared') {title.textContent='Seus salvos não puderam ser carregados';text.textContent='Abra seu cadastro para tentar sincronizar novamente. Nenhum registro foi removido.';action.textContent='Tentar novamente';}
+ else if(!state.user?.profile) {title.textContent='Uma coleção só sua';text.textContent='Crie seu usuário e senha para encontrar seus salvos em qualquer dispositivo.';action.textContent='Entrar ou criar conta';}
+ else {title.textContent=`A coleção de ${state.user.profile.displayName}`;text.textContent='Tudo que você já salvou fica aqui. Salvar no Club não compra ou equipa o emote no Roblox.';action.textContent='Meu cadastro';}
+}
+async function loadPersonal() {
+ const epoch=authEpoch;state.personalReady=false;
+ try {
+  const user=await requestJSON('/api/me');if(epoch!==authEpoch)return;
+  state.user=user;state.personalStorage=user.storage||'unavailable';
+  if(state.personalStorage==='shared')state.favorites=new Set((user.saved||[]).map(item=>String(item.id)));
+  if(!user.signedIn&&authSession){sessionStore.clear();authSession=null;}
+ } catch(error) {if(epoch!==authEpoch)return;state.personalStorage='unavailable';if(error.status===401){clearClientSession();render();refreshDetail();}}
+ finally {if(epoch===authEpoch){state.personalReady=true;if(state.personalStorage==='shared')$('#profile-error').hidden=true;render();refreshDetail();}}
+}
+function importableFavorites() {return [...state.legacyFavorites].filter(id=>state.items.some(item=>item.id===id)&&!state.favorites.has(id));}
+function renderProfile() {
+ const user=state.user,registered=!!user?.profile;
+ $('#profile-loading').hidden=state.personalReady;
+ $('#profile-signin').hidden=!state.personalReady||!!user?.signedIn;
+ $('#profile-signed-in').hidden=!state.personalReady||!user?.signedIn;
+ $('#profile-title').innerHTML=registered?'Sua conta no Club<span>.</span>':authMode==='register'?'Crie seu lugar no Club<span>.</span>':'Entre para o Club<span>.</span>';
+ if(!user?.signedIn) return;
+ if(!profileNameDirty) $('#profile-name').value=user.profile?.displayName||'';
+ $('#profile-identity-name').textContent=`${user.profile?.displayName||user.name} · @${user.username||''}`;
+ $('#profile-stats').hidden=!registered;
+ $('#profile-saved-count').textContent=state.favorites.size;
+ $('#profile-created').textContent=registered?`No Club desde ${new Date(user.profile.createdAt).toLocaleDateString('pt-BR')}`:'';
+ $('#save-profile').textContent=registered?'Salvar meu nome':'Criar meu cadastro';
+ $('#save-profile').disabled=state.personalStorage!=='shared';
+ $('#profile-view-saved').hidden=!registered;
+ const importable=importableFavorites();
+ $('#legacy-import').hidden=!registered||!importable.length;
+ $('#legacy-import-text').textContent=`Há ${importable.length} ${importable.length===1?'favorito antigo salvo':'favoritos antigos salvos'} neste navegador. Importe para a conta que está conectada agora, se forem seus.`;
+ $('#import-favorites').disabled=state.personalStorage!=='shared';
+ if(importable.length)$('#import-favorites').hidden=false;
+ if(state.personalStorage!=='shared') {$('#profile-error').textContent='Não foi possível conectar à sua coleção. Feche e reabra Meu cadastro para tentar novamente.';$('#profile-error').hidden=false;}
+}
+function openProfile() {
+ $('#sidebar').classList.remove('mobile-open');
+ $('#profile-error').hidden=true;$('#import-result').hidden=true;
+ profileNameDirty=false;
+ $('#profile-name').value=state.user?.profile?.displayName||'';
+ openDialog($('#profile-dialog'));renderProfile();
+ if(state.personalStorage!=='shared'&&state.personalReady) loadPersonal();
+}
+async function saveProfile(event) {
+ event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;
+ const epoch=authEpoch;const button=$('#save-profile');button.disabled=true;button.textContent='Salvando…';$('#profile-error').hidden=true;
+ try {
+  const data=await requestJSON('/api/profile',{method:'POST',body:JSON.stringify({displayName:$('#profile-name').value.trim()})});
+  if(epoch!==authEpoch)return;
+  state.user={...state.user,name:data.name,profile:data.profile};profileNameDirty=false;state.personalStorage='shared';render();refreshDetail();
+  toast('Seu nome foi atualizado.');
+ } catch(error) {if(epoch!==authEpoch)return;$('#profile-error').textContent=error.message;$('#profile-error').hidden=false;}
+ finally {if(epoch===authEpoch){button.disabled=state.personalStorage!=='shared';button.textContent=state.user?.profile?'Salvar meu nome':'Criar meu cadastro';}}
+}
+async function importFavorites() {
+ const ids=importableFavorites();if(!ids.length)return;const epoch=authEpoch;
+ const button=$('#import-favorites');button.disabled=true;button.textContent='Importando…';
+ let count=0,errorMessage='';
+ for(const id of ids) {
+  if(epoch!==authEpoch)return;
+  try {await requestJSON('/api/saved',{method:'POST',body:JSON.stringify({id,saved:true})});if(epoch!==authEpoch)return;state.favorites.add(id);state.legacyFavorites.delete(id);count++;}
+  catch(error) {errorMessage=error.message;break;}
+ }
+ if(epoch!==authEpoch)return;
+ try {localStorage.setItem('emoteclub-favorites',JSON.stringify([...state.legacyFavorites]));} catch {}
+ render();refreshDetail();
+ const result=$('#import-result');result.textContent=`${count} ${count===1?'favorito importado':'favoritos importados'} para a sua conta.${errorMessage?' '+errorMessage+' Você pode tentar novamente para importar os restantes.':''}`;result.hidden=false;
+ if(!importableFavorites().length){$('#legacy-import').hidden=false;$('#legacy-import-text').textContent='Todos os favoritos deste navegador já estão na sua conta.';button.hidden=true;}
+ button.disabled=false;button.textContent='Importar favoritos';
+}
+$('#profile-name').addEventListener('input',()=>{profileNameDirty=true;});
+$('#open-profile').addEventListener('click',openProfile);
+$('#profile-form').addEventListener('submit',saveProfile);
+$('#import-favorites').addEventListener('click',importFavorites);
+$('#profile-view-saved').addEventListener('click',()=>{closeDialog($('#profile-dialog'));if($('#detail-dialog').open)closeDialog($('#detail-dialog'));setView('favorites');});
+
+function setAddTab(name,focus=false) {
+ for(const tab of $$('[data-add-tab]')) {
+  const selected=tab.dataset.addTab===name;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;
+  document.getElementById(tab.getAttribute('aria-controls')).hidden=!selected;
+ }
+ const classification=name==='classification';
+ $('#add-next').hidden=classification;$('#add-back').hidden=!classification;$('#save-emote').hidden=!classification;
+ if(focus)document.getElementById(classification?'tab-classification':'tab-emote').focus();
+}
+function parseAddKeywords() {
+ return [...new Set($('#emote-tags').value.split(',').map(tag=>tag.trim().toLocaleLowerCase('pt-BR')).filter(Boolean))];
+}
+function validateKeywordInput() {
+ const tags=parseAddKeywords(),input=$('#emote-tags');
+ const error=!tags.length?'Adicione pelo menos uma palavra-chave.':tags.length>10?'Use no máximo 10 palavras-chave.':tags.some(tag=>tag.length>30)?'Cada palavra-chave pode ter até 30 caracteres.':'';
+ input.setCustomValidity(error);
+ return !error;
+}
+function validateAddForm(form,panelId=null) {
+ if(!panelId||panelId==='panel-classification')validateKeywordInput();
+ const fields=$$('input,select,textarea',panelId?document.getElementById(panelId):form);
+ const invalid=fields.find(field=>!field.checkValidity());
+ if(invalid) {
+  setAddTab(invalid.closest('.add-panel').id==='panel-emote'?'emote':'classification');
+  invalid.focus();invalid.reportValidity();return false;
+ }
+ return true;
+}
+function refreshKeywordSuggestions() {
+ const tags=parseAddKeywords();$('#keyword-count').textContent=`${tags.length}/10`;
+ const ideas=keywordIdeas[$('#emote-category').value]||[];
+ $('#keyword-suggestions').innerHTML=ideas.length?ideas.map(tag=>`<button type="button" class="keyword-chip ${tags.includes(tag)?'selected':''}" data-keyword="${escapeHTML(tag)}" aria-pressed="${tags.includes(tag)}"><span>${tags.includes(tag)?'✓':'+'}</span>${escapeHTML(tag)}</button>`).join(''):'<p>Selecione uma emoção para ver sugestões. Você também pode escrever suas próprias palavras.</p>';
+}
+function toggleKeyword(keyword) {
+ const tags=parseAddKeywords(),included=tags.includes(keyword);
+ if(!included&&tags.length>=10){toast('Você já escolheu 10 palavras-chave. Remova uma para adicionar outra.');return;}
+ $('#emote-tags').value=(included?tags.filter(tag=>tag!==keyword):[...tags,keyword]).join(', ');
+ validateKeywordInput();refreshKeywordSuggestions();
+ const focusButton=$$('[data-keyword]').find(button=>button.dataset.keyword===keyword);focusButton?.focus();
+}
+
+function verificationInfo(item) {
+ const evidence=item.validation;
+ if(!evidence)return '';
+ const date=new Date(evidence.checkedAt).toLocaleDateString('pt-BR');
+ const payload=evidence.payloadAuditPassed?'Arquivo do emote e animação vinculada acessíveis.':evidence.payloadAccess==='authentication-required'?'O arquivo exige autenticação do Roblox. A prévia pública foi conferida.':'Acesso público ao arquivo não confirmado. A prévia pública foi conferida.';
+ const animations=(evidence.animationIds||[]).map(id=>`<div class="animation-id"><div><small>ID DA ANIMAÇÃO</small><code>${escapeHTML(id)}</code></div><button class="icon-button" data-copy="${escapeHTML(id)}" aria-label="Copiar ID da animação">${icon('copy')}</button></div>`).join('');
+ return `<details class="verification-details"><summary>Conferência deste emote <span>↗</span></summary><ul><li>Item do tipo Emote e prévia do Roblox conferidos em ${escapeHTML(date)}.</li><li>${evidence.isPurchasable===true?'Disponível para aquisição na data da conferência.':evidence.isPurchasable===false?'Não disponível para aquisição na data da conferência.':Number.isFinite(evidence.listedPrice)?`Listado no catálogo por ${escapeHTML(evidence.listedPrice)} Robux na data da conferência.`:'Disponibilidade de aquisição não confirmada na data da conferência.'}</li><li>${payload}</li><li>Execução dentro de uma experiência: não testada.</li></ul>${animations}<a href="https://catalog.roblox.com/v1/catalog/items/${encodeURIComponent(item.id)}/details?itemType=Asset" target="_blank" rel="noopener noreferrer">Consultar dados oficiais ↗</a></details>`;
+}
+
+function setAuthMode(mode) {
+ if(authBusy)return;
+ authMode=mode==='register'?'register':'login';const register=authMode==='register';
+ for(const tab of $$('[data-auth-mode]')){const active=tab.dataset.authMode===authMode;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}
+ $('#auth-form').setAttribute('aria-labelledby',register?'auth-tab-register':'auth-tab-login');
+ $('#register-name-field').hidden=!register;$('#register-name').disabled=!register;$('#register-name').required=register;
+ $('#confirm-password-field').hidden=!register;$('#confirm-password').disabled=!register;$('#confirm-password').required=register;$('#confirm-password').setCustomValidity('');
+ $('#auth-password').autocomplete=register?'new-password':'current-password';$('#auth-password').type='password';
+ $('#toggle-password').textContent='Mostrar';$('#toggle-password').setAttribute('aria-label','Mostrar senha');$('#toggle-password').setAttribute('aria-pressed','false');
+ $('#auth-submit').innerHTML=register?`Criar minha conta ${icon('arrow')}`:`Entrar no Club ${icon('arrow')}`;
+ $('#auth-error').hidden=true;renderProfile();
+}
+function clearClientSession() {
+ sessionStore.clear();authSession=null;authEpoch++;
+ state.user={signedIn:false,profile:null,saved:[],storage:'shared'};state.favorites=new Set();state.pendingSaves=new Set();state.personalStorage='shared';state.personalReady=true;
+}
+async function authenticate(event) {
+ event.preventDefault();if(authBusy)return;const form=event.currentTarget;
+ const register=authMode==='register';const password=$('#auth-password').value;
+ $('#confirm-password').setCustomValidity(register&&$('#confirm-password').value!==password?'As senhas precisam ser iguais.':'');
+ if(!form.reportValidity())return;
+ const remember=$('#remember-login').checked;
+ const payload={username:$('#auth-username').value.trim(),password,remember};if(register)payload.displayName=$('#register-name').value.trim();
+ authBusy=true;$('#auth-submit').disabled=true;$('#auth-submit').textContent=register?'Criando sua conta…':'Entrando…';$('#auth-error').hidden=true;
+ try {
+  const data=await requestJSON(register?'/api/auth/register':'/api/auth/login',{method:'POST',body:JSON.stringify(payload)});
+  authSession={token:data.token,expiresAt:data.expiresAt};authEpoch++;
+  const remembered=sessionStore.save(authSession,remember);
+  state.user=data.user;state.personalStorage=data.user.storage;state.personalReady=true;state.favorites=new Set((data.user.saved||[]).map(item=>String(item.id)));
+  profileNameDirty=false;form.reset();$('#auth-password').value='';$('#confirm-password').value='';render();refreshDetail();
+  toast(!remembered?'Você entrou. Este navegador não permitiu guardar a sessão.':register?'Sua conta foi criada. Bem-vindo ao Club!':'Você está de volta. Bora criar!');
+ } catch(error) {$('#auth-error').textContent=error.name==='TimeoutError'?'A conexão demorou. Tente entrar novamente em instantes.':error.message;$('#auth-error').hidden=false;}
+ finally {authBusy=false;$('#auth-submit').disabled=false;$('#auth-submit').innerHTML=register?`Criar minha conta ${icon('arrow')}`:`Entrar no Club ${icon('arrow')}`;}
+}
+async function logout() {
+ const button=$('#logout-account');button.disabled=true;let confirmed=true;
+ try {await requestJSON('/api/auth/logout',{method:'POST',body:'{}'});}catch{confirmed=false;}
+ finally {clearClientSession();$('#auth-form').reset();$('#auth-password').value='';$('#confirm-password').value='';profileNameDirty=false;setAuthMode('login');render();refreshDetail();button.disabled=false;toast(confirmed?'Você saiu. A sessão deste computador foi encerrada.':'Sessão removida deste computador. A confirmação do servidor não chegou.');}
+}
+$('#auth-form').addEventListener('submit',authenticate);
+$('#logout-account').addEventListener('click',logout);
+$('#confirm-password').addEventListener('input',()=>$('#confirm-password').setCustomValidity(''));
+$('#auth-password').addEventListener('input',()=>$('#confirm-password').setCustomValidity(''));
+$('#toggle-password').addEventListener('click',()=>{const show=$('#auth-password').type==='password';$('#auth-password').type=show?'text':'password';$('#toggle-password').textContent=show?'Ocultar':'Mostrar';$('#toggle-password').setAttribute('aria-label',show?'Ocultar senha':'Mostrar senha');$('#toggle-password').setAttribute('aria-pressed',String(show));});
+$('.auth-tabs').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)&&event.target.hasAttribute('data-auth-mode')){event.preventDefault();const mode=event.key==='Home'?'login':event.key==='End'?'register':authMode==='login'?'register':'login';setAuthMode(mode);document.getElementById('auth-tab-'+mode).focus();}});
+window.addEventListener('storage',event=>{if(event.key?.startsWith('emoteclub.session.v1:')){authSession=sessionStore.read();authEpoch++;loadPersonal();}});
+setAuthMode('login');
