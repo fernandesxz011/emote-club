@@ -6,10 +6,12 @@ Catálogo compartilhado de emotes Roblox, com coleção pessoal e cadastro de no
 
 O GitHub Pages hospeda a interface e o acervo inicial. Login, sessões, emotes adicionados e coleções pessoais usam a API hospedada separadamente; esses dados não entram no pacote público.
 
-1. Em **Settings → Pages**, selecione **GitHub Actions** como origem da publicação.
-2. O workflow `.github/workflows/pages.yml` publica alterações da branch `main`. Também pode ser iniciado em **Actions → Publicar Emote Club no GitHub Pages → Run workflow**.
-3. A API padrão é `https://emote-club-studio.fernandesxz011.chatgpt.site`. Para trocar, crie a variável de repositório `EMOTECLUB_API_BASE_URL` em **Settings → Secrets and variables → Actions → Variables**. Use somente a origem HTTPS pública, sem senha, token ou caminho.
-4. Configure a API para aceitar a origem exata do GitHub Pages. A API deve estar acessível aos visitantes do site; o Pages não remove uma eventual restrição de acesso da hospedagem da API.
+1. Em **Settings → Pages → Build and deployment → Source**, selecione **Deploy from a branch**.
+2. Em **Branch**, selecione **gh-pages**, pasta **/ (root)**, e clique **Save**. Essa branch já contém o site estático completo.
+3. O site será publicado em `https://fernandesxz011.github.io/emote-club/`.
+4. A API padrão é `https://emote-club-studio.fernandesxz011.chatgpt.site`. O cadastro usa usuário e senha do Emote Club; marcar **Lembrar neste computador** mantém a sessão por até 30 dias, sem guardar a senha. Sem marcar, a sessão dura no máximo 12 horas e fica na aba atual.
+
+A branch `main` contém o código-fonte. A branch `gh-pages` contém somente os arquivos públicos gerados. O workflow `.github/workflows/pages.yml` fica disponível para execução manual caso o repositório seja configurado futuramente para publicação via GitHub Actions; ele não concorre automaticamente com a publicação pela branch.
 
 Para gerar o pacote localmente:
 
