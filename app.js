@@ -1,10 +1,19 @@
-import {getRecency, formatAddedDate} from '/library.js';
+import {getRecency, formatAddedDate} from './library.js';
+import {createSessionStore} from './session-store.js';
 'use strict';
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const normalize = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const configuredApi=window.EMOTECLUB_CONFIG?.apiBaseUrl||window.location.origin;
+const apiOrigin=new URL(configuredApi).origin;
+function browserStorage(name) {try {return window[name];} catch {return null;}}
+const sessionStore=createSessionStore({persistent:browserStorage('localStorage'),temporary:browserStorage('sessionStorage'),key:'emoteclub.session.v1:'+apiOrigin});
+let authSession=sessionStore.read();
+let authEpoch=0;
+let authMode='login';
+let authBusy=false;
 const categories = [
  {name:'Feliz',emoji:'☺',color:'#c4c177',bg:'#f0efdb',ink:'#8d8841'},
  {name:'Muito feliz',emoji:'✦',color:'#cfb765',bg:'#f5edcf',ink:'#9d8036'},
@@ -36,7 +45,11 @@ const state = {items:[],view:'all',category:'all',query:'',sort:'curated',favori
 let toastTimer;
 let profileNameDirty=false;
 function toast(message) { const el = $('#toast'); $('span', el).textContent = message; el.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => {el.hidden = true;}, 3600); }
-function safeImage(url) { return typeof url === 'string' && (/^\/assets\/[a-zA-Z0-9-]+\.png$/.test(url) || /^https:\/\/[^/]+\.rbxcdn\.com\//.test(url)) ? url : '/assets/emote-4849499887.png'; }
+function safeImage(url) {
+ if(typeof url==='string'&&/^\/?(?:\.\/)?assets\/[a-zA-Z0-9-]+\.png$/.test(url))return './'+url.replace(/^\.?\//,'');
+ if(typeof url==='string'&&/^https:\/\/[^/]+\.rbxcdn\.com\//.test(url))return url;
+ return './assets/emote-4849499887.png';
+}
 function cardStyles(c) { return `--card-bg:${c.bg};--tag-bg:${c.bg};--tag-ink:${c.ink}`; }
 function catalogLink(item) { return `https://www.roblox.com/catalog/${encodeURIComponent(item.id)}`; }
 function openDialog(dialog) { if (!dialog.open) dialog.showModal(); }
@@ -85,14 +98,15 @@ async function favorite(id) {
  if (!state.personalReady || state.pendingSaves.has(id)) return;
  if (!state.user?.signedIn || !state.user?.profile) {openProfile();return;}
  if (state.personalStorage!=='shared') {toast('Não foi possível sincronizar seus salvos. Abra Meu cadastro para tentar novamente.');return;}
- const save=!state.favorites.has(id);
+ const epoch=authEpoch;const save=!state.favorites.has(id);
  state.pendingSaves.add(id);render();refreshDetail();
  try {
   const result=await requestJSON('/api/saved',{method:'POST',body:JSON.stringify({id,saved:save})});
+  if(epoch!==authEpoch)return;
   if(result.saved) state.favorites.add(id); else state.favorites.delete(id);
   toast(result.saved?'Salvo na sua conta. Essa reação já é sua!':'Emote removido da sua coleção.');
- } catch(error) {toast(error.name==='TimeoutError'?'A sincronização demorou. Atualize a página para conferir antes de tentar novamente.':error.message);}
- finally {state.pendingSaves.delete(id);render();refreshDetail();}
+ } catch(error) {if(epoch!==authEpoch)return;toast(error.name==='TimeoutError'?'A sincronização demorou. Atualize a página para conferir antes de tentar novamente.':error.message);}
+ finally {if(epoch===authEpoch){state.pendingSaves.delete(id);render();refreshDetail();}}
 }
 function refreshDetail() {if(state.detailId && $('#detail-dialog').open) showDetail(state.detailId,false);}
 async function copyId(id) {
@@ -106,6 +120,7 @@ function showDetail(id,open=true) {
  if(open) openDialog($('#detail-dialog'));
 }
 function openAdd() {
+ if(!state.user?.signedIn){openProfile();return;}
  setAddTab('emote');
  refreshKeywordSuggestions();
  $('#sidebar').classList.remove('mobile-open');
@@ -115,14 +130,16 @@ function openAdd() {
  openDialog($('#add-dialog'));
 }
 async function requestJSON(path,options={}) {
- const response=await fetch(path,{...options,headers:{...(options.body?{'Content-Type':'application/json'}:{}),...options.headers},signal:AbortSignal.timeout(20000)});
- let data;try {data=await response.json();} catch {throw new Error('Não foi possível ler a resposta do servidor. Tente novamente.');}
- if(!response.ok) { const error=new Error(data.error||'Algo deu errado. Tente novamente.');error.status=response.status;error.code=data.code;throw error;}
+ const headers={...(options.body?{'Content-Type':'application/json'}:{}),...options.headers};
+ if(authSession?.token)headers.Authorization=`Bearer ${authSession.token}`;
+ const response=await fetch(new URL(path,apiOrigin),{...options,headers,credentials:'omit',signal:AbortSignal.timeout(30000)});
+ let data;try {data=await response.json();} catch {throw new Error('Não foi possível conectar ao servidor do Emote Club. Tente novamente.');}
+ if(!response.ok) {const error=new Error(data.error||'Algo deu errado. Tente novamente.');error.status=response.status;error.code=data.code;throw error;}
  return data;
 }
 function formError(message,status) {
  const el=$('#form-error');el.textContent=message;
- if(status===401){const link=document.createElement('a');link.href='/signin-with-chatgpt?return_to=/';link.target='_top';link.textContent=' Entrar com ChatGPT ↗';link.style.textDecoration='underline';el.append(link);}
+ if(status===401){const button=document.createElement('button');button.type='button';button.className='text-button';button.dataset.profile='';button.textContent=' Entrar na minha conta ↗';el.append(button);}
  el.hidden=false;
 }
 async function validateEmote() {
@@ -146,6 +163,7 @@ document.addEventListener('click',event=>{
  const addTab=event.target.closest('[data-add-tab]');if(addTab){setAddTab(addTab.dataset.addTab,true);return;}
  const keyword=event.target.closest('[data-keyword]');if(keyword){toggleKeyword(keyword.dataset.keyword);return;}
  if(event.target.closest('[data-profile]')){openProfile();return;}
+ const mode=event.target.closest('[data-auth-mode]');if(mode){setAuthMode(mode.dataset.authMode);return;}
  const category=event.target.closest('[data-category]');if(category){setCategory(category.dataset.category);return;}
  const view=event.target.closest('[data-view]');if(view){setView(view.dataset.view);return;}
  const fav=event.target.closest('[data-favorite]');if(fav){favorite(fav.dataset.favorite);return;}
@@ -183,7 +201,7 @@ $('#emote-id').addEventListener('input',()=>{$('#validation-result').hidden=true
 document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$$('dialog').some(d=>d.open)){event.preventDefault();$('#search').focus();}});
 async function load() {
  try {const data=await requestJSON('/api/emotes');state.items=data.items;state.storage=data.storage;if(data.warning){$('#catalog-status').textContent=data.warning;$('#catalog-status').hidden=false;}}
- catch {try {state.items=await (await fetch('/seed.json')).json();state.storage='unavailable';$('#catalog-status').textContent='Exibindo o acervo inicial. Não foi possível conectar aos cadastros da equipe. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;}catch{$('#catalog-status').textContent='Não foi possível carregar a biblioteca. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;state.items=[];}}
+ catch {try {state.items=await (await fetch('./seed.json')).json();state.storage='unavailable';$('#catalog-status').textContent='Exibindo o acervo inicial. Não foi possível conectar aos cadastros da equipe. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;}catch{$('#catalog-status').textContent='Não foi possível carregar a biblioteca. Atualize a página para tentar novamente.';$('#catalog-status').hidden=false;state.items=[];}}
  render();
 }
 load();
@@ -191,10 +209,10 @@ loadPersonal();
 
 function renderAccount() {
  const name=state.user?.profile?.displayName;
- $('#account-label').textContent=name||'Meu cadastro';
- $('#sidebar-account-label').textContent=name?`Olá, ${name}`:'Criar meu cadastro';
+ $('#account-label').textContent=name||'Entrar';
+ $('#sidebar-account-label').textContent=name?`Olá, ${name}`:'Entrar ou criar conta';
  $('#user-avatar').textContent=name?name.split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0]).join('').toUpperCase():'EC';
- $('#open-profile').title=name?`Meu cadastro: ${name}`:'Criar ou acessar meu cadastro';
+ $('#open-profile').title=name?`Meu cadastro: ${name}`:'Entrar ou criar minha conta';
  if($('#profile-dialog').open) renderProfile();
 }
 function renderPersonalNotice() {
@@ -206,14 +224,18 @@ function renderPersonalNotice() {
  if(state.view==='recent') {title.textContent='Novidades dos últimos 7 dias';text.textContent='Novo: primeiras 48 horas no acervo. Recente: de 48 horas até 7 dias. A data de inclusão aparece nos detalhes.';return;}
  if(!state.personalReady) {title.textContent='Carregando sua coleção…';text.textContent='Estamos buscando os emotes salvos na sua conta.';action.hidden=true;}
  else if(state.personalStorage!=='shared') {title.textContent='Seus salvos não puderam ser carregados';text.textContent='Abra seu cadastro para tentar sincronizar novamente. Nenhum registro foi removido.';action.textContent='Tentar novamente';}
- else if(!state.user?.profile) {title.textContent='Uma coleção só sua';text.textContent='Crie seu cadastro com um nome e encontre seus salvos em qualquer dispositivo.';action.textContent='Criar meu cadastro';}
+ else if(!state.user?.profile) {title.textContent='Uma coleção só sua';text.textContent='Crie seu usuário e senha para encontrar seus salvos em qualquer dispositivo.';action.textContent='Entrar ou criar conta';}
  else {title.textContent=`A coleção de ${state.user.profile.displayName}`;text.textContent='Tudo que você já salvou fica aqui. Salvar no Club não compra ou equipa o emote no Roblox.';action.textContent='Meu cadastro';}
 }
 async function loadPersonal() {
- state.personalReady=false;
- try {const user=await requestJSON('/api/me');state.user=user;state.personalStorage=user.storage||'unavailable';if(state.personalStorage==='shared'){state.favorites=new Set((user.saved||[]).map(item=>String(item.id)));}}
- catch {state.personalStorage='unavailable';}
- finally {state.personalReady=true;if(state.personalStorage==='shared')$('#profile-error').hidden=true;render();refreshDetail();}
+ const epoch=authEpoch;state.personalReady=false;
+ try {
+  const user=await requestJSON('/api/me');if(epoch!==authEpoch)return;
+  state.user=user;state.personalStorage=user.storage||'unavailable';
+  if(state.personalStorage==='shared')state.favorites=new Set((user.saved||[]).map(item=>String(item.id)));
+  if(!user.signedIn&&authSession){sessionStore.clear();authSession=null;}
+ } catch(error) {if(epoch!==authEpoch)return;state.personalStorage='unavailable';if(error.status===401){clearClientSession();render();refreshDetail();}}
+ finally {if(epoch===authEpoch){state.personalReady=true;if(state.personalStorage==='shared')$('#profile-error').hidden=true;render();refreshDetail();}}
 }
 function importableFavorites() {return [...state.legacyFavorites].filter(id=>state.items.some(item=>item.id===id)&&!state.favorites.has(id));}
 function renderProfile() {
@@ -221,10 +243,10 @@ function renderProfile() {
  $('#profile-loading').hidden=state.personalReady;
  $('#profile-signin').hidden=!state.personalReady||!!user?.signedIn;
  $('#profile-signed-in').hidden=!state.personalReady||!user?.signedIn;
- $('#profile-title').innerHTML=registered?'Seu cadastro no Club<span>.</span>':'Seu lugar no Club<span>.</span>';
+ $('#profile-title').innerHTML=registered?'Sua conta no Club<span>.</span>':authMode==='register'?'Crie seu lugar no Club<span>.</span>':'Entre para o Club<span>.</span>';
  if(!user?.signedIn) return;
  if(!profileNameDirty) $('#profile-name').value=user.profile?.displayName||'';
- $('#profile-identity-name').textContent=user.name||'Conta do ChatGPT';
+ $('#profile-identity-name').textContent=`${user.profile?.displayName||user.name} · @${user.username||''}`;
  $('#profile-stats').hidden=!registered;
  $('#profile-saved-count').textContent=state.favorites.size;
  $('#profile-created').textContent=registered?`No Club desde ${new Date(user.profile.createdAt).toLocaleDateString('pt-BR')}`:'';
@@ -235,6 +257,7 @@ function renderProfile() {
  $('#legacy-import').hidden=!registered||!importable.length;
  $('#legacy-import-text').textContent=`Há ${importable.length} ${importable.length===1?'favorito antigo salvo':'favoritos antigos salvos'} neste navegador. Importe para a conta que está conectada agora, se forem seus.`;
  $('#import-favorites').disabled=state.personalStorage!=='shared';
+ if(importable.length)$('#import-favorites').hidden=false;
  if(state.personalStorage!=='shared') {$('#profile-error').textContent='Não foi possível conectar à sua coleção. Feche e reabra Meu cadastro para tentar novamente.';$('#profile-error').hidden=false;}
 }
 function openProfile() {
@@ -247,22 +270,25 @@ function openProfile() {
 }
 async function saveProfile(event) {
  event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;
- const button=$('#save-profile');button.disabled=true;button.textContent='Salvando…';$('#profile-error').hidden=true;
+ const epoch=authEpoch;const button=$('#save-profile');button.disabled=true;button.textContent='Salvando…';$('#profile-error').hidden=true;
  try {
   const data=await requestJSON('/api/profile',{method:'POST',body:JSON.stringify({displayName:$('#profile-name').value.trim()})});
-  state.user={...state.user,name:data.name,profile:data.profile};state.favorites=new Set((data.saved||[]).map(item=>String(item.id)));profileNameDirty=false;state.personalStorage='shared';render();refreshDetail();
-  toast('Cadastro salvo. Agora é só escolher suas reações!');
- } catch(error) {$('#profile-error').textContent=error.message;$('#profile-error').hidden=false;}
- finally {button.disabled=state.personalStorage!=='shared';button.textContent=state.user?.profile?'Salvar meu nome':'Criar meu cadastro';}
+  if(epoch!==authEpoch)return;
+  state.user={...state.user,name:data.name,profile:data.profile};profileNameDirty=false;state.personalStorage='shared';render();refreshDetail();
+  toast('Seu nome foi atualizado.');
+ } catch(error) {if(epoch!==authEpoch)return;$('#profile-error').textContent=error.message;$('#profile-error').hidden=false;}
+ finally {if(epoch===authEpoch){button.disabled=state.personalStorage!=='shared';button.textContent=state.user?.profile?'Salvar meu nome':'Criar meu cadastro';}}
 }
 async function importFavorites() {
- const ids=importableFavorites();if(!ids.length)return;
+ const ids=importableFavorites();if(!ids.length)return;const epoch=authEpoch;
  const button=$('#import-favorites');button.disabled=true;button.textContent='Importando…';
  let count=0,errorMessage='';
  for(const id of ids) {
-  try {await requestJSON('/api/saved',{method:'POST',body:JSON.stringify({id,saved:true})});state.favorites.add(id);state.legacyFavorites.delete(id);count++;}
+  if(epoch!==authEpoch)return;
+  try {await requestJSON('/api/saved',{method:'POST',body:JSON.stringify({id,saved:true})});if(epoch!==authEpoch)return;state.favorites.add(id);state.legacyFavorites.delete(id);count++;}
   catch(error) {errorMessage=error.message;break;}
  }
+ if(epoch!==authEpoch)return;
  try {localStorage.setItem('emoteclub-favorites',JSON.stringify([...state.legacyFavorites]));} catch {}
  render();refreshDetail();
  const result=$('#import-result');result.textContent=`${count} ${count===1?'favorito importado':'favoritos importados'} para a sua conta.${errorMessage?' '+errorMessage+' Você pode tentar novamente para importar os restantes.':''}`;result.hidden=false;
@@ -324,3 +350,51 @@ function verificationInfo(item) {
  const animations=(evidence.animationIds||[]).map(id=>`<div class="animation-id"><div><small>ID DA ANIMAÇÃO</small><code>${escapeHTML(id)}</code></div><button class="icon-button" data-copy="${escapeHTML(id)}" aria-label="Copiar ID da animação">${icon('copy')}</button></div>`).join('');
  return `<details class="verification-details"><summary>Conferência deste emote <span>↗</span></summary><ul><li>Item do tipo Emote e prévia do Roblox conferidos em ${escapeHTML(date)}.</li><li>${evidence.isPurchasable===true?'Disponível para aquisição na data da conferência.':evidence.isPurchasable===false?'Não disponível para aquisição na data da conferência.':Number.isFinite(evidence.listedPrice)?`Listado no catálogo por ${escapeHTML(evidence.listedPrice)} Robux na data da conferência.`:'Disponibilidade de aquisição não confirmada na data da conferência.'}</li><li>${payload}</li><li>Execução dentro de uma experiência: não testada.</li></ul>${animations}<a href="https://catalog.roblox.com/v1/catalog/items/${encodeURIComponent(item.id)}/details?itemType=Asset" target="_blank" rel="noopener noreferrer">Consultar dados oficiais ↗</a></details>`;
 }
+
+function setAuthMode(mode) {
+ if(authBusy)return;
+ authMode=mode==='register'?'register':'login';const register=authMode==='register';
+ for(const tab of $$('[data-auth-mode]')){const active=tab.dataset.authMode===authMode;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;}
+ $('#auth-form').setAttribute('aria-labelledby',register?'auth-tab-register':'auth-tab-login');
+ $('#register-name-field').hidden=!register;$('#register-name').disabled=!register;$('#register-name').required=register;
+ $('#confirm-password-field').hidden=!register;$('#confirm-password').disabled=!register;$('#confirm-password').required=register;$('#confirm-password').setCustomValidity('');
+ $('#auth-password').autocomplete=register?'new-password':'current-password';$('#auth-password').type='password';
+ $('#toggle-password').textContent='Mostrar';$('#toggle-password').setAttribute('aria-label','Mostrar senha');$('#toggle-password').setAttribute('aria-pressed','false');
+ $('#auth-submit').innerHTML=register?`Criar minha conta ${icon('arrow')}`:`Entrar no Club ${icon('arrow')}`;
+ $('#auth-error').hidden=true;renderProfile();
+}
+function clearClientSession() {
+ sessionStore.clear();authSession=null;authEpoch++;
+ state.user={signedIn:false,profile:null,saved:[],storage:'shared'};state.favorites=new Set();state.pendingSaves=new Set();state.personalStorage='shared';state.personalReady=true;
+}
+async function authenticate(event) {
+ event.preventDefault();if(authBusy)return;const form=event.currentTarget;
+ const register=authMode==='register';const password=$('#auth-password').value;
+ $('#confirm-password').setCustomValidity(register&&$('#confirm-password').value!==password?'As senhas precisam ser iguais.':'');
+ if(!form.reportValidity())return;
+ const remember=$('#remember-login').checked;
+ const payload={username:$('#auth-username').value.trim(),password,remember};if(register)payload.displayName=$('#register-name').value.trim();
+ authBusy=true;$('#auth-submit').disabled=true;$('#auth-submit').textContent=register?'Criando sua conta…':'Entrando…';$('#auth-error').hidden=true;
+ try {
+  const data=await requestJSON(register?'/api/auth/register':'/api/auth/login',{method:'POST',body:JSON.stringify(payload)});
+  authSession={token:data.token,expiresAt:data.expiresAt};authEpoch++;
+  const remembered=sessionStore.save(authSession,remember);
+  state.user=data.user;state.personalStorage=data.user.storage;state.personalReady=true;state.favorites=new Set((data.user.saved||[]).map(item=>String(item.id)));
+  profileNameDirty=false;form.reset();$('#auth-password').value='';$('#confirm-password').value='';render();refreshDetail();
+  toast(!remembered?'Você entrou. Este navegador não permitiu guardar a sessão.':register?'Sua conta foi criada. Bem-vindo ao Club!':'Você está de volta. Bora criar!');
+ } catch(error) {$('#auth-error').textContent=error.name==='TimeoutError'?'A conexão demorou. Tente entrar novamente em instantes.':error.message;$('#auth-error').hidden=false;}
+ finally {authBusy=false;$('#auth-submit').disabled=false;$('#auth-submit').innerHTML=register?`Criar minha conta ${icon('arrow')}`:`Entrar no Club ${icon('arrow')}`;}
+}
+async function logout() {
+ const button=$('#logout-account');button.disabled=true;let confirmed=true;
+ try {await requestJSON('/api/auth/logout',{method:'POST',body:'{}'});}catch{confirmed=false;}
+ finally {clearClientSession();$('#auth-form').reset();$('#auth-password').value='';$('#confirm-password').value='';profileNameDirty=false;setAuthMode('login');render();refreshDetail();button.disabled=false;toast(confirmed?'Você saiu. A sessão deste computador foi encerrada.':'Sessão removida deste computador. A confirmação do servidor não chegou.');}
+}
+$('#auth-form').addEventListener('submit',authenticate);
+$('#logout-account').addEventListener('click',logout);
+$('#confirm-password').addEventListener('input',()=>$('#confirm-password').setCustomValidity(''));
+$('#auth-password').addEventListener('input',()=>$('#confirm-password').setCustomValidity(''));
+$('#toggle-password').addEventListener('click',()=>{const show=$('#auth-password').type==='password';$('#auth-password').type=show?'text':'password';$('#toggle-password').textContent=show?'Ocultar':'Mostrar';$('#toggle-password').setAttribute('aria-label',show?'Ocultar senha':'Mostrar senha');$('#toggle-password').setAttribute('aria-pressed',String(show));});
+$('.auth-tabs').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)&&event.target.hasAttribute('data-auth-mode')){event.preventDefault();const mode=event.key==='Home'?'login':event.key==='End'?'register':authMode==='login'?'register':'login';setAuthMode(mode);document.getElementById('auth-tab-'+mode).focus();}});
+window.addEventListener('storage',event=>{if(event.key?.startsWith('emoteclub.session.v1:')){authSession=sessionStore.read();authEpoch++;loadPersonal();}});
+setAuthMode('login');

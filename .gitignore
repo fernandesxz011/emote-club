@@ -5,3 +5,5 @@ node_modules/
 .sites-runtime/
 .env*
 .dev.vars*
+pages/
+catalog-delivery-audit.json

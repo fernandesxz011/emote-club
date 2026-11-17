@@ -14,7 +14,7 @@ async function assetDirectory(relative) {
     if (entry.isDirectory()) await assetDirectory(child); else await assetFile(child);
   }
 }
-for (const file of ['index.html', 'styles.css', 'app.js', 'library.js', 'seed.json', 'catalog-audit.json']) await assetFile(file);
+for (const file of ['index.html', 'styles.css', 'app.js', 'library.js', 'session-store.js', 'config.js', 'seed.json', 'catalog-audit.json']) await assetFile(file);
 try { await assetDirectory('assets'); } catch (error) { if (error.code !== 'ENOENT') throw error; }
 const seed = JSON.parse(await readFile(path.join(root, 'seed.json'), 'utf8'));
 if (!Array.isArray(seed) || !seed.length) throw new Error('seed.json precisa conter os emotes pesquisados.');
@@ -24,8 +24,9 @@ if (manifest.static) throw new Error('O catálogo compartilhado usa Worker; remo
 await rm(path.join(root, 'dist'), {recursive: true, force: true});
 await mkdir(path.join(root, 'dist/server'), {recursive: true});
 await mkdir(path.join(root, 'dist/.openai'), {recursive: true});
-const server = await readFile(path.join(root, 'server.js'), 'utf8');
-await writeFile(path.join(root, 'dist/server/index.js'), server + '\nexport default createWorker({seed:' + JSON.stringify(seed) + ',assets:' + JSON.stringify(assets) + '});\n');
+const auth = await readFile(path.join(root, 'auth.js'), 'utf8');
+const server = (await readFile(path.join(root, 'server.js'), 'utf8')).replace(/^import \{[^}]+\} from '\.\/auth\.js';\s*/m, '');
+await writeFile(path.join(root, 'dist/server/index.js'), auth + '\n' + server + '\nexport default createWorker({seed:' + JSON.stringify(seed) + ',assets:' + JSON.stringify(assets) + '});\n');
 await writeFile(path.join(root, 'dist/.openai/hosting.json'), JSON.stringify(manifest, null, 2) + '\n');
 await cp(path.join(root, 'drizzle'), path.join(root, 'dist/drizzle'), {recursive: true});
 console.log(`Worker pronto: ${seed.length} emotes e ${Object.keys(assets).length} arquivos incorporados.`);

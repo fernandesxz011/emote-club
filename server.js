@@ -1,3 +1,5 @@
+import {AuthError, registerAccount, loginAccount, logoutAccount, sessionIdentity} from './auth.js';
+
 export const CATEGORIES = ['Feliz', 'Muito feliz', 'Triste', 'Muito triste', 'Confirmação', 'Negação', 'Raiva', 'Surpresa', 'Dança', 'Cumprimentos', 'Descanso', 'Medo', 'Confiança'];
 
 const responseHeaders = {
@@ -28,20 +30,32 @@ export function parseAssetId(value) {
   } catch { return null; }
 }
 
-function identity(request) {
-  const id = request.headers.get('oai-authenticated-user-id');
-  if (!id) return null;
-  let name = request.headers.get('oai-authenticated-user-full-name');
-  if (name && request.headers.get('oai-authenticated-user-full-name-encoding') === 'percent-encoded-utf-8') {
-    try { name = decodeURIComponent(name); } catch { name = null; }
-  }
-  return {id, name: name || request.headers.get('oai-authenticated-user-email') || 'Pessoa da equipe'};
-}
-
 async function bodyOf(request) {
-  if (!request.headers.get('content-type')?.includes('application/json')) throw new Error('Envie os dados em formato JSON.');
-  const raw = await request.text();
-  if (raw.length > 12000) throw new Error('O cadastro está muito grande. Reduza a descrição e as palavras-chave.');
+  if (request.headers.get('content-type')?.split(';')[0].trim().toLowerCase() !== 'application/json') throw new Error('Envie os dados em formato JSON.');
+  const maxBytes = 12 * 1024;
+  const oversized = () => new AuthError('O formulário está muito grande. Reduza os dados e tente novamente.', 413, 'BODY_TOO_LARGE');
+  if (Number(request.headers.get('content-length')) > maxBytes) throw oversized();
+  const chunks = [];
+  let size = 0;
+  const reader = request.body?.getReader();
+  if (reader) {
+    try {
+      while (true) {
+        const {value, done} = await reader.read();
+        if (done) break;
+        size += value.byteLength;
+        if (size > maxBytes) {
+          await reader.cancel().catch(() => {});
+          throw oversized();
+        }
+        chunks.push(value);
+      }
+    } finally { reader.releaseLock(); }
+  }
+  const bytes = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
+  const raw = new TextDecoder().decode(bytes);
   try {
     const body = JSON.parse(raw);
     if (!body || typeof body !== 'object' || Array.isArray(body)) throw new Error();
@@ -73,32 +87,36 @@ export async function verifyRoblox(id, fetcher = fetch) {
 
 export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
   const catalogSeed = seed.map(item => ({...item, createdAt: item.createdAt || '2026-11-16T23:47:52.897Z'}));
-  return {
-    async fetch(request, env = {}) {
+  async function userSnapshot(db, user) {
+    const [profile, saved] = await Promise.all([readProfile(db, user.id), readSaved(db, user.id)]);
+    return {signedIn: true, name: profile?.displayName || user.name, username: user.username, profile, saved, storage: 'shared'};
+  }
+  async function handleRequest(request, env = {}) {
       const url = new URL(request.url);
       const path = url.pathname;
-      const user = identity(request);
 
       if (path === '/api/health' && request.method === 'GET') return json({ok: true, database: Boolean(env.DB)});
+      if ((path === '/api/auth/register' || path === '/api/auth/login') && request.method === 'POST') {
+        let body;
+        try { body = await bodyOf(request); } catch (error) { return fail(error.message, error.status || 400, error.code); }
+        const result = path.endsWith('/register') ? await registerAccount(env.DB, request, body) : await loginAccount(env.DB, request, body);
+        return json({token: result.token, expiresAt: result.expiresAt, user: await userSnapshot(env.DB, result.user)}, path.endsWith('/register') ? 201 : 200);
+      }
+      if (path === '/api/auth/logout' && request.method === 'POST') return json(await logoutAccount(env.DB, request));
+
+      const needsIdentity = path === '/api/me' || path === '/api/profile' || path === '/api/saved' || (request.method === 'POST' && (path === '/api/emotes' || path === '/api/validate'));
+      const user = needsIdentity ? await sessionIdentity(request, env.DB) : null;
       if (path === '/api/me' && request.method === 'GET') {
-        const base = {signedIn: Boolean(user), name: user?.name ?? null, profile: null, saved: [], storage: env.DB ? 'shared' : 'unavailable'};
+        const base = {signedIn: false, name: null, username: null, profile: null, saved: [], storage: env.DB ? 'shared' : 'unavailable'};
         if (!user) return json(base);
-        if (!env.DB) return json({...base, warning: 'Seu perfil e seus emotes salvos estão temporariamente indisponíveis. Tente novamente em instantes.'});
-        try {
-          const [profile, saved] = await Promise.all([readProfile(env.DB, user.id), readSaved(env.DB, user.id)]);
-          return json({...base, name: profile?.displayName || user.name, profile, saved});
-        } catch {
-          return json({...base, storage: 'unavailable', warning: 'Não foi possível carregar seu perfil e seus emotes salvos. Tente novamente em instantes.'});
-        }
+        return json(await userSnapshot(env.DB, user));
       }
 
       if ((path === '/api/profile' || path === '/api/saved') && request.method === 'POST') {
-        const origin = request.headers.get('origin');
-        if (origin && origin !== url.origin) return fail('Esta solicitação veio de outro site. Abra o Emote Club e tente novamente.', 403);
-        if (!user) return fail('Entre com sua conta do ChatGPT para usar sua biblioteca pessoal.', 401);
+        if (!user) return fail('Entre na sua conta para usar sua biblioteca pessoal.', 401);
         if (!env.DB) return fail('Sua biblioteca pessoal está temporariamente indisponível. Tente novamente em instantes.', 503);
         let body;
-        try { body = await bodyOf(request); } catch (error) { return fail(error.message); }
+        try { body = await bodyOf(request); } catch (error) { return fail(error.message, error.status || 400, error.code); }
 
         if (path === '/api/profile') {
           const displayName = typeof body.displayName === 'string' ? body.displayName.trim().replace(/\s+/g, ' ') : '';
@@ -148,11 +166,9 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
       }
 
       if ((path === '/api/emotes' || path === '/api/validate') && request.method === 'POST') {
-        const origin = request.headers.get('origin');
-        if (origin && origin !== url.origin) return fail('Esta solicitação veio de outro site. Abra o Emote Club e tente novamente.', 403);
-        if (!user) return fail('Entre com sua conta do ChatGPT para adicionar emotes à biblioteca da equipe.', 401);
+        if (!user) return fail('Entre na sua conta para adicionar emotes à biblioteca da equipe.', 401);
         let body;
-        try { body = await bodyOf(request); } catch (error) { return fail(error.message); }
+        try { body = await bodyOf(request); } catch (error) { return fail(error.message, error.status || 400, error.code); }
         const id = parseAssetId(body.id);
         if (!id) return fail('Informe um ID de catálogo válido ou um link https://www.roblox.com/catalog/ID.');
         if (path === '/api/validate') {
@@ -199,6 +215,41 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
         'X-Content-Type-Options': 'nosniff',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
       }});
-    }
+  }
+  return {
+    async fetch(request, env = {}) {
+      const url = new URL(request.url);
+      const origin = request.headers.get('origin');
+      const origins = new Set([url.origin, 'https://fernandesxz011.github.io']);
+      for (const configured of String(env.ALLOWED_ORIGINS || '').split(',')) {
+        try {
+          const parsed = new URL(configured.trim());
+          if (parsed.protocol === 'https:' && parsed.origin === configured.trim()) origins.add(parsed.origin);
+        } catch { /* Ignore malformed deployment configuration. */ }
+      }
+      const allowed = !origin || origins.has(origin);
+      const cors = response => {
+        const headers = new Headers(response.headers);
+        if (origin && origins.has(origin)) {
+          headers.set('Access-Control-Allow-Origin', origin);
+          headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+          headers.set('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+          headers.set('Access-Control-Expose-Headers', 'Retry-After');
+        }
+        headers.set('Vary', 'Origin');
+        return new Response(response.body, {status: response.status, headers});
+      };
+      if (request.method === 'OPTIONS') return cors(allowed ? new Response(null, {status: 204, headers: {'Access-Control-Max-Age': '600'}}) : fail('Origem não permitida.', 403));
+      if (!allowed && !['GET', 'HEAD'].includes(request.method)) return cors(fail('Esta solicitação veio de outro site. Abra o Emote Club e tente novamente.', 403));
+      try { return cors(await handleRequest(request, env)); }
+      catch (error) {
+        if (error instanceof AuthError) {
+          const response = fail(error.message, error.status, error.code);
+          if (error.retryAfter) response.headers.set('Retry-After', String(error.retryAfter));
+          return cors(response);
+        }
+        return cors(fail('Não foi possível acessar os dados agora. Tente novamente em instantes.', 503));
+      }
+    },
   };
 }

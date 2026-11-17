@@ -2,14 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {createWorker, parseAssetId} from '../server.js';
 
 const origin = 'https://emote.test';
 const seed = [{id: '4849499887', name: 'Happy', category: 'Feliz'}];
 const input = {id: '1234567890', name: 'Emote da equipe', category: 'Feliz', description: 'Uma comemoração para a gravação.', tags: ['alegria', 'festa']};
+const testToken = id => createHash('sha256').update(`test-session:${id}`).digest('base64url');
 const req = (path, body, extra = {}) => new Request(origin + path, {
   method: body ? 'POST' : 'GET',
-  headers: {...(body ? {'content-type': 'application/json', 'origin': origin, 'oai-authenticated-user-id': 'user-123', 'oai-authenticated-user-email': 'ana@example.com'} : {}), ...extra},
+  headers: {...(body ? {'content-type': 'application/json', 'origin': origin, authorization: `Bearer ${testToken('user-123')}`} : {}), ...extra},
   ...(body ? {body: JSON.stringify(body)} : {}),
 });
 const remote = async url => url.includes('thumbnails.roblox.com')
@@ -19,9 +21,19 @@ function fakeDB() {
   const database = new DatabaseSync(':memory:');
   database.exec(readFileSync(new URL('../drizzle/0000_catalog.sql', import.meta.url), 'utf8'));
   database.exec(readFileSync(new URL('../drizzle/0001_personal_library.sql', import.meta.url), 'utf8'));
+  database.exec(readFileSync(new URL('../drizzle/0002_password_auth.sql', import.meta.url), 'utf8'));
+  for (const [id, username] of [['user-123', 'ana123'], ['user-456', 'user456'], ['other-user', 'otheruser']]) {
+    database.prepare('INSERT INTO accounts (id, username, password_hash, created_at) VALUES (?, ?, ?, ?)').run(id, username, 'not-used-by-session-tests', '2026-01-01T00:00:00.000Z');
+    database.prepare('INSERT INTO sessions (token_hash, account_id, created_at, expires_at) VALUES (?, ?, ?, ?)').run(createHash('sha256').update(testToken(id)).digest('hex'), id, '2026-01-01T00:00:00.000Z', '2099-01-01T00:00:00.000Z');
+  }
   return {
     database,
     rows: {get size() { return database.prepare('SELECT COUNT(*) AS count FROM emotes').get().count; }},
+    async batch(statements) {
+      database.exec('BEGIN');
+      try { const results = []; for (const statement of statements) results.push(await statement.run()); database.exec('COMMIT'); return results; }
+      catch (error) { database.exec('ROLLBACK'); throw error; }
+    },
     prepare(sql) {
       const statement = database.prepare(sql);
       let args = [];
@@ -45,7 +57,7 @@ test('parses catalog IDs and rejects lookalike hosts and animation links', () =>
 
 test('authentication and same-origin checks precede validation and storage', async () => {
   const worker = createWorker({seed, fetcher: () => { throw new Error('must not call Roblox'); }});
-  assert.equal((await worker.fetch(req('/api/emotes', input, {'oai-authenticated-user-id': ''}), {})).status, 401);
+  assert.equal((await worker.fetch(req('/api/emotes', input, {authorization: '', 'oai-authenticated-user-id': 'user-123'}), {})).status, 401);
   assert.equal((await worker.fetch(req('/api/emotes', input, {origin: 'https://evil.test'}), {})).status, 403);
 });
 
@@ -57,7 +69,7 @@ test('shared additions persist across requests and preserve official metadata', 
   const {item} = await response.json();
   assert.equal(item.name, 'Official Happy Dance');
   assert.equal(item.creator, 'Roblox');
-  assert.equal(item.addedBy, 'ana@example.com');
+  assert.equal(item.addedBy, 'ana123');
   assert.equal(item.verified, true);
   assert.equal(item.source, 'https://www.roblox.com/catalog/1234567890');
   assert.equal(item.category, 'Feliz');
@@ -73,7 +85,8 @@ test('missing, empty and invalid keywords and emotions are rejected before remot
   let fetchCalls = 0;
   let databaseCalls = 0;
   const worker = createWorker({seed, fetcher: () => { fetchCalls++; throw new Error('Invalid input must not reach Roblox'); }});
-  const db = {prepare() { databaseCalls++; throw new Error('Invalid input must not reach storage'); }};
+  const sessions = fakeDB();
+  const db = {prepare(sql) { if (sql.includes('FROM sessions')) return sessions.prepare(sql); databaseCalls++; throw new Error('Invalid input must not reach catalog storage'); }};
   const {tags, ...withoutTags} = input;
   const keywordError = 'Adicione de 1 a 10 palavras-chave, com até 30 caracteres cada.';
   const invalidCases = [
@@ -133,13 +146,13 @@ test('embedded assets return UTF-8 bytes and unknown assets return 404', async (
   assert.equal((await worker.fetch(req('/missing.png'))).status, 404);
 });
 
-const userHeaders = (id = 'user-123') => ({'oai-authenticated-user-id': id, 'oai-authenticated-user-email': `${id}@example.com`});
+const userHeaders = (id = 'user-123') => ({authorization: `Bearer ${testToken(id)}`});
 
 test('personal library requires authentication, same-origin requests and an existing profile', async () => {
   const worker = createWorker({seed});
   const db = fakeDB();
   for (const [path, body] of [['/api/profile', {displayName: 'Ana'}], ['/api/saved', {id: seed[0].id, saved: true}]]) {
-    assert.equal((await worker.fetch(req(path, body, {'oai-authenticated-user-id': ''}), {DB: db})).status, 401);
+    assert.equal((await worker.fetch(req(path, body, {authorization: '', 'oai-authenticated-user-id': 'user-123'}), {DB: db})).status, 401);
     assert.equal((await worker.fetch(req(path, body, {origin: 'https://evil.test'}), {DB: db})).status, 403);
   }
   const missing = await worker.fetch(req('/api/saved', {id: seed[0].id, saved: true}), {DB: db});
@@ -239,21 +252,18 @@ test('personal library can save shared additions without a remote Roblox request
   assert.equal((await worker.fetch(req('/api/saved', {id: input.id, saved: true}), {DB: db})).status, 200);
 });
 
-test('missing database and query failures preserve sign-in but report unavailable personal storage', async () => {
+test('database and session query failures return 503 instead of pretending the session is signed out', async () => {
   const worker = createWorker({seed});
   const brokenDB = {prepare() { throw new Error('database down'); }};
   for (const env of [{}, {DB: brokenDB}]) {
-    const me = await (await worker.fetch(req('/api/me', null, userHeaders()), env)).json();
-    assert.equal(me.signedIn, true);
-    assert.equal(me.storage, 'unavailable');
-    assert.equal(me.profile, null);
-    assert.deepEqual(me.saved, []);
-    assert.match(me.warning, /perfil/);
+    const me = await worker.fetch(req('/api/me', null, userHeaders()), env);
+    assert.equal(me.status, 503);
+    assert.equal((await me.json()).signedIn, undefined);
     assert.equal((await worker.fetch(req('/api/profile', {displayName: 'Ana'}), env)).status, 503);
     assert.equal((await worker.fetch(req('/api/saved', {id: seed[0].id, saved: true}), env)).status, 503);
   }
   const anonymous = await (await worker.fetch(req('/api/me'), {DB: fakeDB()})).json();
-  assert.deepEqual(anonymous, {signedIn: false, name: null, profile: null, saved: [], storage: 'shared'});
+  assert.deepEqual(anonymous, {signedIn: false, name: null, username: null, profile: null, saved: [], storage: 'shared'});
 });
 
 test('initial catalog dates are filled only when absent and shared additions keep their true date', async () => {
