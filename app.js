@@ -21,6 +21,15 @@ const categories = [
  {name:'Confiança',emoji:'↗',color:'#9eabc3',bg:'#e8ecf5',ink:'#7b88a2'}
 ];
 const categoryOf = name => categories.find(c => c.name === name) || categories[0];
+const keywordIdeas = {
+ 'Feliz':['alegria','sorriso','boa notícia'], 'Muito feliz':['comemoração','vitória','euforia'],
+ 'Triste':['tristeza','decepção','desânimo'], 'Muito triste':['choro','sofrimento','drama'],
+ 'Confirmação':['sim','concordar','aprovação'], 'Negação':['não','recusar','discordar'],
+ 'Raiva':['irritação','bravo','frustração'], 'Surpresa':['espanto','choque','revelação'],
+ 'Dança':['festa','ritmo','coreografia'], 'Cumprimentos':['olá','despedida','saudação'],
+ 'Descanso':['relaxar','pausa','cansaço'], 'Medo':['susto','pânico','receio'],
+ 'Confiança':['atitude','orgulho','pose']
+};
 let savedFavorites;
 try { savedFavorites = JSON.parse(localStorage.getItem('emoteclub-favorites') || '[]'); } catch { savedFavorites = []; }
 const state = {items:[],view:'all',category:'all',query:'',sort:'curated',favorites:new Set(),legacyFavorites:new Set(Array.isArray(savedFavorites) ? savedFavorites.map(String) : []),pendingSaves:new Set(),personalReady:false,personalStorage:'loading',storage:'loading',user:null,detailId:null};
@@ -97,6 +106,8 @@ function showDetail(id,open=true) {
  if(open) openDialog($('#detail-dialog'));
 }
 function openAdd() {
+ setAddTab('emote');
+ refreshKeywordSuggestions();
  $('#sidebar').classList.remove('mobile-open');
  const error=$('#form-error');error.hidden=true;
  if(state.storage!=='shared') {error.textContent='O cadastro compartilhado está temporariamente indisponível. Você pode explorar os emotes enquanto isso.';error.hidden=false;}
@@ -123,14 +134,17 @@ async function validateEmote() {
  finally {button.disabled=false;button.textContent='Conferir';}
 }
 async function saveEmote(event) {
- event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;
+ event.preventDefault();const form=event.currentTarget;
+ if(!validateAddForm(form))return;
  const submit=$('#save-emote');submit.disabled=true;submit.innerHTML='Salvando…';$('#form-error').hidden=true;
- const fields=new FormData(form),payload={id:fields.get('id').trim(),name:fields.get('name').trim(),category:fields.get('category'),description:fields.get('description').trim(),tags:fields.get('tags').split(',').map(tag=>tag.trim()).filter(Boolean)};
- try {const {item}=await requestJSON('/api/emotes',{method:'POST',body:JSON.stringify(payload)});state.items.push(item);closeDialog($('#add-dialog'));form.reset();$('#validation-result').hidden=true;setView('added');toast('Nova reação no acervo. A equipe agradece!');}
+ const fields=new FormData(form),payload={id:fields.get('id').trim(),name:fields.get('name').trim(),category:fields.get('category'),description:fields.get('description').trim(),tags:parseAddKeywords()};
+ try {const {item}=await requestJSON('/api/emotes',{method:'POST',body:JSON.stringify(payload)});state.items.push(item);closeDialog($('#add-dialog'));form.reset();$('#emote-tags').setCustomValidity('');refreshKeywordSuggestions();setAddTab('emote');$('#validation-result').hidden=true;setView('added');toast('Nova reação no acervo. A equipe agradece!');}
  catch(error){formError(error.name==='TimeoutError'?'A resposta demorou mais que o esperado. Busque pelo ID antes de tentar salvar novamente.':error.message,error.status);}
  finally {submit.disabled=false;submit.innerHTML=`${icon('plus')}Adicionar ao acervo`;}
 }
 document.addEventListener('click',event=>{
+ const addTab=event.target.closest('[data-add-tab]');if(addTab){setAddTab(addTab.dataset.addTab,true);return;}
+ const keyword=event.target.closest('[data-keyword]');if(keyword){toggleKeyword(keyword.dataset.keyword);return;}
  if(event.target.closest('[data-profile]')){openProfile();return;}
  const category=event.target.closest('[data-category]');if(category){setCategory(category.dataset.category);return;}
  const view=event.target.closest('[data-view]');if(view){setView(view.dataset.view);return;}
@@ -152,7 +166,17 @@ $('#catalog-about').addEventListener('click',()=>openDialog($('#guide-dialog')))
 $('#mobile-menu').addEventListener('click',()=>$('#sidebar').classList.toggle('mobile-open'));
 $('#grid-view').addEventListener('click',()=>setLayout(false));$('#list-view').addEventListener('click',()=>setLayout(true));
 function setLayout(list) {$('#emote-grid').classList.toggle('list-mode',list);$('#grid-view').classList.toggle('active',!list);$('#list-view').classList.toggle('active',list);$('#grid-view').setAttribute('aria-pressed',String(!list));$('#list-view').setAttribute('aria-pressed',String(list));}
-$('#emote-category').innerHTML=categories.map(c=>`<option value="${c.name}">${c.name}</option>`).join('');
+$('#emote-category').innerHTML='<option value="" disabled selected>Selecione uma emoção</option>'+categories.map(c=>`<option value="${c.name}">${c.name}</option>`).join('');
+$('#emote-category').addEventListener('change',refreshKeywordSuggestions);
+$('#emote-tags').addEventListener('input',()=>{validateKeywordInput();refreshKeywordSuggestions();});
+$('#add-next').addEventListener('click',()=>{if(validateAddForm($('#add-form'),'panel-emote'))setAddTab('classification',true);});
+$('#add-back').addEventListener('click',()=>setAddTab('emote',true));
+$('.add-tabs').addEventListener('keydown',event=>{
+ if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||event.target.getAttribute('role')!=='tab')return;
+ event.preventDefault();
+ const current=event.target.dataset.addTab;const next=event.key==='Home'?'emote':event.key==='End'?'classification':current==='emote'?'classification':'emote';
+ setAddTab(next,true);
+});
 $('#validate-emote').addEventListener('click',validateEmote);
 $('#add-form').addEventListener('submit',saveEmote);
 $('#emote-id').addEventListener('input',()=>{$('#validation-result').hidden=true;});
@@ -250,3 +274,44 @@ $('#open-profile').addEventListener('click',openProfile);
 $('#profile-form').addEventListener('submit',saveProfile);
 $('#import-favorites').addEventListener('click',importFavorites);
 $('#profile-view-saved').addEventListener('click',()=>{closeDialog($('#profile-dialog'));if($('#detail-dialog').open)closeDialog($('#detail-dialog'));setView('favorites');});
+
+function setAddTab(name,focus=false) {
+ for(const tab of $$('[data-add-tab]')) {
+  const selected=tab.dataset.addTab===name;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;
+  document.getElementById(tab.getAttribute('aria-controls')).hidden=!selected;
+ }
+ const classification=name==='classification';
+ $('#add-next').hidden=classification;$('#add-back').hidden=!classification;$('#save-emote').hidden=!classification;
+ if(focus)document.getElementById(classification?'tab-classification':'tab-emote').focus();
+}
+function parseAddKeywords() {
+ return [...new Set($('#emote-tags').value.split(',').map(tag=>tag.trim().toLocaleLowerCase('pt-BR')).filter(Boolean))];
+}
+function validateKeywordInput() {
+ const tags=parseAddKeywords(),input=$('#emote-tags');
+ const error=!tags.length?'Adicione pelo menos uma palavra-chave.':tags.length>10?'Use no máximo 10 palavras-chave.':tags.some(tag=>tag.length>30)?'Cada palavra-chave pode ter até 30 caracteres.':'';
+ input.setCustomValidity(error);
+ return !error;
+}
+function validateAddForm(form,panelId=null) {
+ if(!panelId||panelId==='panel-classification')validateKeywordInput();
+ const fields=$$('input,select,textarea',panelId?document.getElementById(panelId):form);
+ const invalid=fields.find(field=>!field.checkValidity());
+ if(invalid) {
+  setAddTab(invalid.closest('.add-panel').id==='panel-emote'?'emote':'classification');
+  invalid.focus();invalid.reportValidity();return false;
+ }
+ return true;
+}
+function refreshKeywordSuggestions() {
+ const tags=parseAddKeywords();$('#keyword-count').textContent=`${tags.length}/10`;
+ const ideas=keywordIdeas[$('#emote-category').value]||[];
+ $('#keyword-suggestions').innerHTML=ideas.length?ideas.map(tag=>`<button type="button" class="keyword-chip ${tags.includes(tag)?'selected':''}" data-keyword="${escapeHTML(tag)}" aria-pressed="${tags.includes(tag)}"><span>${tags.includes(tag)?'✓':'+'}</span>${escapeHTML(tag)}</button>`).join(''):'<p>Selecione uma emoção para ver sugestões. Você também pode escrever suas próprias palavras.</p>';
+}
+function toggleKeyword(keyword) {
+ const tags=parseAddKeywords(),included=tags.includes(keyword);
+ if(!included&&tags.length>=10){toast('Você já escolheu 10 palavras-chave. Remova uma para adicionar outra.');return;}
+ $('#emote-tags').value=(included?tags.filter(tag=>tag!==keyword):[...tags,keyword]).join(', ');
+ validateKeywordInput();refreshKeywordSuggestions();
+ const focusButton=$$('[data-keyword]').find(button=>button.dataset.keyword===keyword);focusButton?.focus();
+}

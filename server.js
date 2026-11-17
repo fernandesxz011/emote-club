@@ -165,7 +165,7 @@ export function createWorker({seed = [], assets = {}, fetcher = fetch} = {}) {
         if (name.length < 2 || name.length > 150) return fail('O nome precisa ter entre 2 e 150 caracteres.');
         if (!CATEGORIES.includes(body.category)) return fail('Selecione uma das emoções da lista.');
         if (description.length < 10 || description.length > 600) return fail('Descreva o emote usando entre 10 e 600 caracteres.');
-        if (!Array.isArray(body.tags) || body.tags.length > 10 || body.tags.some(tag => typeof tag !== 'string' || !tag.trim() || tag.trim().length > 30)) return fail('Use até 10 palavras-chave com no máximo 30 caracteres cada.');
+        if (!Array.isArray(body.tags) || body.tags.length < 1 || body.tags.length > 10 || body.tags.some(tag => typeof tag !== 'string' || !tag.trim() || tag.trim().length > 30)) return fail('Adicione de 1 a 10 palavras-chave, com até 30 caracteres cada.');
         if (seed.some(item => String(item.id) === id)) return fail('Este emote já está na biblioteca. Busque pelo ID para encontrá-lo.', 409);
         try {
           const existing = await env.DB.prepare('SELECT id FROM emotes WHERE id = ?').bind(id).first();

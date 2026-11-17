@@ -52,7 +52,7 @@ test('authentication and same-origin checks precede validation and storage', asy
 test('shared additions persist across requests and preserve official metadata', async () => {
   const db = fakeDB();
   const worker = createWorker({seed, fetcher: remote});
-  const response = await worker.fetch(req('/api/emotes', input), {DB: db});
+  const response = await worker.fetch(req('/api/emotes', {...input, tags: ['  ALEGRIA  ', 'festa', 'alegria']}), {DB: db});
   assert.equal(response.status, 201);
   const {item} = await response.json();
   assert.equal(item.name, 'Official Happy Dance');
@@ -60,11 +60,40 @@ test('shared additions persist across requests and preserve official metadata', 
   assert.equal(item.addedBy, 'ana@example.com');
   assert.equal(item.verified, true);
   assert.equal(item.source, 'https://www.roblox.com/catalog/1234567890');
+  assert.equal(item.category, 'Feliz');
+  assert.deepEqual(item.tags, ['alegria', 'festa']);
   const listed = await (await worker.fetch(req('/api/emotes'), {DB: db})).json();
   assert.equal(listed.storage, 'shared');
   assert.equal(listed.items.length, 2);
   assert.deepEqual(listed.items[1], item);
   assert.equal((await worker.fetch(req('/api/emotes', input), {DB: db})).status, 409);
+});
+
+test('missing, empty and invalid keywords and emotions are rejected before remote requests or database access', async () => {
+  let fetchCalls = 0;
+  let databaseCalls = 0;
+  const worker = createWorker({seed, fetcher: () => { fetchCalls++; throw new Error('Invalid input must not reach Roblox'); }});
+  const db = {prepare() { databaseCalls++; throw new Error('Invalid input must not reach storage'); }};
+  const {tags, ...withoutTags} = input;
+  const keywordError = 'Adicione de 1 a 10 palavras-chave, com até 30 caracteres cada.';
+  const invalidCases = [
+    [withoutTags, keywordError],
+    [{...input, tags: []}, keywordError],
+    [{...input, tags: ['   ']}, keywordError],
+    [{...input, tags: ['alegria', '\n\t']}, keywordError],
+    [{...input, tags: ['palavra', 123]}, keywordError],
+    [{...input, tags: ['x'.repeat(31)]}, keywordError],
+    [{...input, tags: Array.from({length: 11}, (_, index) => `tag${index}`)}, keywordError],
+    [{...input, category: ''}, 'Selecione uma das emoções da lista.'],
+    [{...input, category: 'Outra'}, 'Selecione uma das emoções da lista.'],
+  ];
+  for (const [body, expectedError] of invalidCases) {
+    const response = await worker.fetch(req('/api/emotes', body), {DB: db});
+    assert.equal(response.status, 400);
+    assert.equal((await response.json()).error, expectedError);
+  }
+  assert.equal(fetchCalls, 0);
+  assert.equal(databaseCalls, 0);
 });
 
 test('seed duplicate, invalid emotions and oversized tags cannot be added', async () => {
